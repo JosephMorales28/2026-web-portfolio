@@ -40,18 +40,22 @@
             <source srcset="../img/joseph2026.webp" type="image/webp">
             <img src="../img/joseph2026.webp" alt="profile picture" loading="lazy" fetchpriority="high">
         </picture>
-        <h1 class="myName"></h1>
-        <h2 class="myPosition"></h2>
-        <p>Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.</p>
+        <h1 id="myName"></h1>
+        <h2 id="myPosition"></h2>
+        <p id="myBio"></p>
         <script>
             function myName(){
-                document.getElementsByClassName("myName")[0].innerHTML="Joseph Anthony V.Morales";
+                document.getElementById("myName").innerHTML="Joseph Anthony V.Morales";
             }
             myName();
             function myPosition(){
-                document.getElementsByClassName("myPosition")[0].innerHTML="Web Development | Graphic Design";
+                document.getElementById("myPosition").innerHTML="Web Development | Graphic Design";
             }
             myPosition();
+            function myBio(){
+                document.getElementById("myBio").innerHTML="Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.";
+            }
+            myBio();
         </script>
     </nav>
     <main role="main">
