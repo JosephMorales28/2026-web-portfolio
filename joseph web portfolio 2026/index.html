@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="#" type-image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Joseph Anthony V. Morales">
+    <meta name="description" content="Joseph's personal web portfolio showcasing his work in web development and graphic design.">
+    <meta name="keywords" content="Joseph Morales, web portfolio, web development, graphic design, projects, resume">
+    <meta name="language" content="English">
+    <meta name="copyright" content="2026 Joseph Anthony V. Morales">
+    <meta name="distribution" content="global">
+    <link rel="icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <script type="speculationrules">
+       {
+            "prerender": [ 
+                {
+                    "urls":["/index.html$","/about.html$"],
+                    "eagerness": "moderate" 
+                } 
+            ]
+        }
+    </script>
     <title>Joseph Web Portfolio 2026</title>
 </head>
 <body>
     <header>
         <div class="logo"></div>
           <ul class="header-link">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li>Services</li>
             <li>Resume</li>
           </ul>
     </header>
-    <nav>
+    <nav role="navigation">
         <picture>
-            <source srcset="../img/joseph2026.jpg" type="image/jpg">
+            <source srcset="../img/joseph2026.webp" type="image/webp">
             <img src="../img/joseph2026.webp" alt="profile picture" loading="lazy" fetchpriority="high">
         </picture>
         <h1>Joseph Anthony V. Morales</h1>
-        <h3>Web Development | Grapic Design</h3>
+        <h2>Web Development | Grapic Design</h2>
         <p>Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.</p>
     </nav>
-    <section>
-        <h1>My Portfolio</h1>
+    <main role="main">
+        <h1 id="projects">My Portfolio</h1>
+        <div class="portfolio-section">
+                <div class="portfolio-img">
+                    <picture>
+                        <source srcset="#" type="image/jpg">
+                    <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
+                </picture>
+            </div>
+            <div class="portfolio-description">
+                <h2>My first project</h2>
+                <p>This is my first project in web development and graphic design</p>
+            </div>
+            <div class="portfolio-link">
+                <a href="#">&#10547;</a>
+            </div>
+        </div>
+
         <div class="portfolio-section">
             <div class="portfolio-img">
                 <picture>
-                    <source srcset="../img/projects.jpg" type="image/jpg">
-                    <img src="../img/projects.webp" alt="projects picture" loading="lazy" fetchpriority="high">
+                    <source srcset="#" type="image/jpg">
+                    <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
                 </picture>
             </div>
             <div class="portfolio-description">
@@ -44,26 +77,12 @@
                 <a href="#">&#10547;</a>
             </div>
         </div>
-                <div class="portfolio-section">
-            <div class="portfolio-img">
-                <picture>
-                    <source srcset="../img/projects.jpg" type="image/jpg">
-                    <img src="../img/projects.webp" alt="projects picture" loading="lazy" fetchpriority="high">
-                </picture>
-            </div>
-            <div class="portfolio-description">
-                <h2>My first project</h2>
-                <p>This is my first project in web development and graphic design</p>
-            </div>
-            <div class="portfolio-link">
-                <a href="#">&#10547;</a>
-            </div>
-        </div>
+        
         <div class="portfolio-section">
             <div class="portfolio-img">
                 <picture>
-                    <source srcset="../img/projects.jpg" type="image/jpg">
-                    <img src="../img/projects.webp" alt="projects picture" loading="lazy" fetchpriority="high">
+                    <source srcset="#" type="image/jpg">
+                    <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
                 </picture>
             </div>
             <div class="portfolio-description">
@@ -74,6 +93,6 @@
                 <a href="#">&#10547;</a>
             </div>
         </div>
-    </section>
+    </main>
 </body>
 </html>
