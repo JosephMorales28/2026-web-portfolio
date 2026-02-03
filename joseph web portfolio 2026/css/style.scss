@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     background-image: url('../img/background.webp');
@@ -31,6 +32,10 @@ header{
            display: inline;
            margin:0 15px;
         }
+        li a{
+            text-decoration: none;
+            color:$fontcolor;
+        }
     }
 }
 
@@ -54,12 +59,13 @@ nav{
         border:2px solid $fontcolor;
         border-radius: 100%;
     }
-    h1,h3,p{
+    h1,h2,p{
         color:$fontcolor;
         padding:1rem;
     }
-    h3{
+    h2{
         margin-top:-25px;
+        font-size: 1rem;
         color: $secondaryfontcolor;
     }
     p{
@@ -68,7 +74,7 @@ nav{
     }
 }
 
-section{    
+main{    
     position: absolute;
     top:530px;
     left:425px;
@@ -90,7 +96,7 @@ section{
         border-radius: 10px;
         .portfolio-img{
                 img{
-                    width:600px;
+                    width:700px;
                     height:400px;
                     border:2px solid $fontcolor;
                 } 
@@ -112,6 +118,11 @@ section{
                 color:$fontcolor;
             }
         }
+    }
+    p{
+        color:$fontcolor;
+        width:650px;
+        text-align: justify;
     }
 }
 
