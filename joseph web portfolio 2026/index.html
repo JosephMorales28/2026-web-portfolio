@@ -40,9 +40,19 @@
             <source srcset="../img/joseph2026.webp" type="image/webp">
             <img src="../img/joseph2026.webp" alt="profile picture" loading="lazy" fetchpriority="high">
         </picture>
-        <h1>Joseph Anthony V. Morales</h1>
-        <h2>Web Development | Grapic Design</h2>
+        <h1 class="myName"></h1>
+        <h2 class="myPosition"></h2>
         <p>Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.</p>
+        <script>
+            function myName(){
+                document.getElementsByClassName("myName")[0].innerHTML="Joseph Anthony V.Morales";
+            }
+            myName();
+            function myPosition(){
+                document.getElementsByClassName("myPosition")[0].innerHTML="Web Development | Graphic Design";
+            }
+            myPosition();
+        </script>
     </nav>
     <main role="main">
         <h1 id="projects">My Portfolio</h1>
