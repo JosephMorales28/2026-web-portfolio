@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Joseph Anthony V. Morales">
+    <meta name="description" content="Joseph's personal web portfolio showcasing his work in web development and graphic design.">
+    <meta name="keywords" content="Joseph Morales, web portfolio, web development, graphic design, projects, resume">
+    <meta name="language" content="English">
+    <meta name="copyright" content="2026 Joseph Anthony V. Morales">
+    <meta name="distribution" content="global">
+    <link rel="icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="speculationrules">
+       {
+            "prerender": [ 
+                {
+                    "source":"document",
+                    "where":{
+                        "href_matches":["^/index.html$","^/about.html$","^/service.html$","^/contact.html$"]
+                    },
+                    "eagerness": "moderate" 
+                } 
+            ] 
+        }
+    </script>
+    <title>Joseph Web Portfolio 2026 -Project</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <picture>
+                <source srcset="../img/logo.svg" type="image/svg">
+                <img src="../img/logo.svg" alt="logo" loading="lazy" fetchpriority="high">
+            </picture>
+        </div>
+          <ul class="header-link">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/project.html">Projects</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/contact.html">Resume</a></li>
+          </ul>
+    </header>
+    <nav role="navigation">
+        <picture>
+            <source srcset="../img/joseph2026.webp" type="image/webp">
+            <img src="../img/joseph2026.webp" alt="profile picture" loading="lazy" fetchpriority="high">
+        </picture>
+        <h1 id="myName"></h1>
+        <h2 id="myPosition"></h2>
+        <p id="myBio"></p>
+        <script>
+            function myName(){
+                document.getElementById("myName").innerHTML="Joseph Anthony V. Morales";
+            }
+            myName();
+            function myPosition(){
+                document.getElementById("myPosition").innerHTML="Web Development | Graphic Design";
+            }
+            myPosition();
+            function myBio(){
+                document.getElementById("myBio").innerHTML="Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.";
+            }
+            myBio();
+        </script>
+    </nav>
+    <main role="main">
+        <h1 id="projects"></h1>
+        <p id="myBioContent"></p>
+        <script>
+            function project(){
+                document.getElementById("projects").innerHTML="My Projects";
+            }
+            project();
+
+            function myBio(){
+                document.getElementById("myBioContent").innerHTML="I am Joseph Anthony V. Morales, a dedicated web developer and graphic designer with a passion for creating visually appealing and user-friendly digital experiences. With a strong foundation in both front-end and back-end development, I specialize in building responsive websites and engaging graphics that effectively communicate brand messages. My expertise includes HTML, CSS, JavaScript, and various design tools, allowing me to deliver comprehensive solutions that meet client needs. I am committed to continuous learning and staying updated with the latest industry trends to ensure my work remains innovative and impactful.";
+            }
+            myBio();
+        </script>
+    </main>
+    <button>
+        <a href="#index">&uarr; Back on top</a>
+    </button>
+</body>
+</html>
