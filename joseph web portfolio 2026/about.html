@@ -18,7 +18,7 @@
                 {
                     "source":"document",
                     "where":{
-                        "href_matches":["/index.html$","/about.html$"]
+                        "href_matches":["^/index.html$","^/projects.html$","^/service.html$","^/contact.html$"]
                     },
                     "eagerness": "moderate" 
                 } 
@@ -29,13 +29,18 @@
 </head>
 <body>
     <header>
-        <div class="logo"></div>
+        <div class="logo">
+            <picture>
+                <source srcset="../img/logo.svg" type="image/svg">
+                <img src="../img/logo.svg" alt="logo" loading="lazy" fetchpriority="high">
+            </picture>
+        </div>
           <ul class="header-link">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/about.html">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li>Services</li>
-            <li>Resume</li>
+            <li><a href="/project.html">Projects</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/contact.html">Resume</a></li>
           </ul>
     </header>
     <nav role="navigation">
@@ -48,7 +53,7 @@
         <p id="myBio"></p>
         <script>
             function myName(){
-                document.getElementById("myName").innerHTML="Joseph Anthony V.Morales";
+                document.getElementById("myName").innerHTML="Joseph Anthony V. Morales";
             }
             myName();
             function myPosition(){
@@ -76,5 +81,8 @@
             myBio();
         </script>
     </main>
+    <button>
+        <a href="#index">&uarr; Back on top</a>
+    </button>
 </body>
 </html>
