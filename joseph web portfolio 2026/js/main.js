@@ -69,4 +69,14 @@ export function exp_main_func(){
             </main>
         `;
     }
+    else if(window.location.pathname.endsWith("project.html")){
+        const projectTitle="My Projects";
+        const projectParagraph="Welcome to my projects page! Here, you'll find a curated selection of my work in web development and graphic design. Each project showcases my skills, creativity, and dedication to delivering high-quality results. Feel free to explore and reach out if you'd like to collaborate or learn more about my work.";
+        return `
+            <main role="main">
+                <h1 id="projects">${projectTitle}</h1>
+                <p>${projectParagraph}</p>
+            </main>
+        `;
+    }
 }
