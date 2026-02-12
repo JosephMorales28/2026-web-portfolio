@@ -36,12 +36,15 @@
             </picture>
         </div>
           <ul class="header-link">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/project.html">Projects</a></li>
-            <li><a href="/service.html">Services</a></li>
-            <li><a href="/contact.html">Resume</a></li>
           </ul>
+            <script>
+                const menu=["Home", "About", "Projects", "Service", "Contact"];
+                const link=["/index.html", "/about.html", "/project.html", "/service.html", "/contact.html"];
+                
+                document.querySelector(".header-link").innerHTML=menu.map((item,index)=>{
+                    return `<li><a href="${link[index]}">${item}</a></li>`;
+                }).join("");
+            </script>
     </header>
     <script type="module" src="js/index.js"></script>
     <button>
