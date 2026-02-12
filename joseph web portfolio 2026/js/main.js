@@ -1,5 +1,6 @@
 export function exp_main_func(){
-    if(window.location.pathname.endsWith("index.html")){
+        if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+            
         const myTitle="My Portfolio";
         const myDescription="My First Project";
         const myParagraph="This is my first project in web development and graphic design";
@@ -100,3 +101,9 @@ export function exp_main_func(){
         `;
     }
 }
+
+
+
+
+
+
