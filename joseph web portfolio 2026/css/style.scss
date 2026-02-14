@@ -7,20 +7,20 @@
 }
 body{
     background-image: url('../img/background.webp');
-
+}
 /* The `header` styling block in the SCSS code is defining the styles for a header section of a
 webpage. Here's a breakdown of what each property is doing: */
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position:absolute;
     top:25px;
     background-color: $headerbg;
     border: 2px solid $header;
-    border-radius: 1rem;
-    margin-left:425px;
-    width:700px;
+    border-radius: .50rem;
+    margin-left:350px;
+    width:850px;
     .logo{
         img{
            width:50px;
@@ -33,10 +33,31 @@ header{
         li{
            display: inline;
            margin:0 15px;
+           text-transform: uppercase;
         }
         li a{
             text-decoration: none;
             color:$fontcolor;
+        }
+    }
+    .btnResume{
+        background: $secondaryfontcolor;
+        color:$fontcolor;
+        padding:.50rem;
+        border: 0 solid transparent;
+        border-radius:5px;
+        margin-right: 1rem;
+        a{
+            text-decoration: none;
+            color:$fontcolor;
+        }
+    }
+    .btnResume:hover{
+        background: $fontcolor;
+        transition: all 0.3s ease-in-out;
+        a{
+            text-decoration: none;
+            color: $headerbgone;
         }
     }
 }
@@ -49,16 +70,16 @@ nav{
     flex-direction: column;
     align-items: center;
     top:250px;
-    left:425px;
+    left:350px;
     padding:1rem;
-    width:700px;
+    width:850px;
     background-color: $headerbg;
     border: 2px solid $header;
-    border-radius: 1rem;
+    border-radius: .50rem;
     img{
         position:absolute;
         top:-125px;
-        left:275px;
+        left:350px;
         width:150px;
         height:150px;
         border:2px solid $fontcolor;
@@ -82,18 +103,20 @@ nav{
 main{    
     position: absolute;
     top:500px;
-    left:425px;
+    left:350px;
     padding:1rem;
-    width:700px;
+    width:850px;
     background-color: $headerbg;
     border: 2px solid $header;
-    border-radius: 1rem;
+    border-radius: .50rem;
     h1{
         color: $secondaryfontcolor;
         padding-bottom: 5px;
     }
     .portfolio-section{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding:1rem;
         margin-bottom:10px;
         background-color: $header;
@@ -114,7 +137,7 @@ main{
             position: absolute;
             align-items: center;
             margin-left:1rem;
-            left:600px;
+            left:750px;
             padding:1rem;
             background-color: $secondaryfontcolor;
             border:0 solid transparent;
@@ -126,7 +149,7 @@ main{
     }
     p{
         color:$fontcolor;
-        width:650px;
+        width:800px;
         text-align: justify;
     }
 }
@@ -138,13 +161,9 @@ button{
     padding:1rem;
     border:0 solid transparent;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
     z-index: 1;
     a{
         text-decoration: none;
-    }
-    a:hover{
-        color:$fontcolor;
     }
 }
 button:hover{
@@ -157,7 +176,6 @@ button:hover{
     border-radius: 10px;
     color: $fontcolor;
     transition: all 0.3s ease-in-out;
-    transform: scale(1.1);
     z-index: 1;
     a{
         color: $fontcolor;
@@ -168,21 +186,27 @@ section{
     position: absolute;
     display: flex;
     top:930px;
-    left:425px;
+    left:350px;
     padding:1rem;
-    width:700px;
+    width:850px;
     background-color: $headerbg;
     border: 2px solid $header;
-    border-radius: 1rem;
+    border-radius: .50rem;
     h1{
         color: $secondaryfontcolor;
         padding-bottom: 5px;
     }
+    .software-list{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width:500px;
+        gap:1rem;
+    }
 }
-}
+
 footer{
     position: absolute;
-    bottom:-400px;
+    bottom:-950px;
     width:100%;
     padding:1rem;
     background-color: $secondaryfontcolor;
