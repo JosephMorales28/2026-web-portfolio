@@ -1,4 +1,6 @@
-@import 'scss/colors.scss';
+@use 'scss/font' as f;
+@use 'scss/colors' as c;
+
 *, html{
     margin:0;
     padding:0;
@@ -16,8 +18,8 @@ header{
     align-items: center;
     position:absolute;
     top:25px;
-    background-color: $headerbg;
-    border: 2px solid $header;
+    background-color: c.$headerbg;
+    border: 2px solid c.$header;
     border-radius: .50rem;
     margin-left:350px;
     width:850px;
@@ -29,7 +31,8 @@ header{
     }
     ul, .header-link{
         list-style-type: none;
-        color:$fontcolor;
+        color:c.$fontcolor;
+        @include f.font-900;
         li{
            display: inline;
            margin:0 15px;
@@ -37,27 +40,28 @@ header{
         }
         li a{
             text-decoration: none;
-            color:$fontcolor;
+            color:c.$fontcolor;
         }
     }
     .btnResume{
-        background: $secondaryfontcolor;
-        color:$fontcolor;
+        background: c.$secondaryfontcolor;
+        color:c.$fontcolor;
         padding:.50rem;
         border: 0 solid transparent;
         border-radius:5px;
         margin-right: 1rem;
+        @include f.font-normal;
         a{
             text-decoration: none;
-            color:$fontcolor;
+            color:c.$fontcolor;
         }
     }
     .btnResume:hover{
-        background: $fontcolor;
+        background: c.$fontcolor;
         transition: all 0.3s ease-in-out;
         a{
             text-decoration: none;
-            color: $headerbgone;
+            color: c.$headerbgone;
         }
     }
 }
@@ -73,8 +77,8 @@ nav{
     left:350px;
     padding:1rem;
     width:850px;
-    background-color: $headerbg;
-    border: 2px solid $header;
+    background-color: c.$headerbg;
+    border: 2px solid c.$header;
     border-radius: .50rem;
     img{
         position:absolute;
@@ -82,21 +86,24 @@ nav{
         left:350px;
         width:150px;
         height:150px;
-        border:2px solid $fontcolor;
+        border:2px solid c.$fontcolor;
         border-radius: 100%;
     }
-    h1,h2,p{
-        color:$fontcolor;
+    h1,h2{
+        @include f.font-normal;
+        color:c.$fontcolor;
         padding:1rem;
     }
     h2{
         margin-top:-25px;
         font-size: 1rem;
-        color: $secondaryfontcolor;
+        color: c.$secondaryfontcolor;
     }
     p{
+        color:c.$fontcolor;
         text-align: center;
         width:350px;
+        @include f.font-ubuntu-normal;
     }
 }
 
@@ -106,12 +113,13 @@ main{
     left:350px;
     padding:1rem;
     width:850px;
-    background-color: $headerbg;
-    border: 2px solid $header;
+    background-color: c.$headerbg;
+    border: 2px solid c.$header;
     border-radius: .50rem;
     h1{
-        color: $secondaryfontcolor;
+        color: c.$secondaryfontcolor;
         padding-bottom: 5px;
+        @include f.font-900;
     }
     .portfolio-section{
         display: flex;
@@ -119,19 +127,25 @@ main{
         align-items: center;
         padding:1rem;
         margin-bottom:10px;
-        background-color: $header;
-        border: 2px solid $headerbgone;
+        background-color: c.$header;
+        border: 2px solid c.$headerbgone;
         border-radius: 10px;
         .portfolio-img{
                 img{
                     width:700px;
                     height:400px;
-                    border:2px solid $fontcolor;
+                    border:2px solid c.$fontcolor;
                 } 
         }
         .portfolio-description{
-            color:$fontcolor;
+            color:c.$fontcolor;
             margin-left:1rem;
+            h2{
+                @include f.font-900;
+            }
+            p{
+                @include f.font-ubuntu-normal;
+            }
         }
         .portfolio-link{
             position: absolute;
@@ -139,75 +153,120 @@ main{
             margin-left:1rem;
             left:750px;
             padding:1rem;
-            background-color: $secondaryfontcolor;
+            background-color: c.$secondaryfontcolor;
             border:0 solid transparent;
             a{
                 text-decoration: none;
-                color:$fontcolor;
+                color:c.$fontcolor;
             }
         }
     }
     p{
-        color:$fontcolor;
+        color:c.$fontcolor;
         width:800px;
         text-align: justify;
+        @include f.font-ubuntu-normal;
     }
 }
 button{
     position:fixed;
-    background-color: $fontcolor;
+    background-color: c.$fontcolor;
     bottom:20px;
-    right:20px;
+    right:10px;
     padding:1rem;
     border:0 solid transparent;
     border-radius: 10px;
     z-index: 1;
+    @include f.font-900;
     a{
         text-decoration: none;
     }
 }
 button:hover{
     position:fixed;
-    background-color: $secondaryfontcolor;
+    background-color: c.$secondaryfontcolor;
     bottom:20px;
-    right:20px;
+    right:10px;
     padding:1rem;
     border:0 solid transparent;
     border-radius: 10px;
-    color: $fontcolor;
+    color: c.$fontcolor;
     transition: all 0.3s ease-in-out;
     z-index: 1;
     a{
-        color: $fontcolor;
+        color: c.$fontcolor;
     }
 }
 
 section{
     position: absolute;
-    display: flex;
     top:930px;
     left:350px;
     padding:1rem;
     width:850px;
-    background-color: $headerbg;
-    border: 2px solid $header;
+    background-color: c.$headerbg;
+    border: 2px solid c.$header;
     border-radius: .50rem;
     h1{
-        color: $secondaryfontcolor;
+        color: c.$secondaryfontcolor;
         padding-bottom: 5px;
+        @include f.font-900;
     }
     .software-list{
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        width:500px;
+        grid-template-columns:2fr 1fr;
         gap:1rem;
+        .software-item{
+           h2{
+               color:c.$fontcolor;
+               padding-bottom: 1.10rem;
+               @include f.font-900;
+           }
+           img{
+            display: inline-block;
+            position: relative;
+            top:20px;
+            width:50px;
+            height:50px;
+            padding:10px;
+            background-color: c.$secondaryfontcolor;
+            border:0 solid transparent;
+            border-radius: 5px;
+           }
+           p{
+            width:350px;
+            color:c.$fontcolor;
+            @include f.font-ubuntu-normal;
+           }
+        }
     }
 }
 
 footer{
     position: absolute;
-    bottom:-950px;
+    bottom:-850px;
     width:100%;
     padding:1rem;
-    background-color: $secondaryfontcolor;
+    background-color: c.$secondaryfontcolor;
+    @include f.font-ubuntu-normal;
+    .footer{
+        display:flex;
+        padding:1rem;
+        gap:1rem;
+        justify-content: center;
+        align-items: center;
+        a{
+            text-decoration: none;
+            color:c.$headerbgone;
+        }
+        a:hover{
+            color: c.$fontcolor;
+            transition: all 0.2s ease-in-out;
+        }
+        img{
+            width:30px;
+            height:30px;
+            background-color: none;
+        }
+    }
 }
