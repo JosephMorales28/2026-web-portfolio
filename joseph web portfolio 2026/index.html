@@ -12,6 +12,9 @@
     <meta name="distribution" content="global">
     <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style"/>
+    <link rel="preload" href="js/script.js" as="script"/>
+    <link rel="preconnect" href="http://127.0.0.1:5500/index.html">
     <script src="js/script.js" defer></script>
     <script type="speculationrules">
        {
@@ -53,6 +56,28 @@
     </button>
 </body>
 <footer>
-    <p>Copyrights &copy; 2026 Joseph Morales.</p>
+    <div class="footer"></div>
+
+    <script>
+        const footername = ["Joseph Morales"];
+        const imagesrc = [
+            "../img/icons/behance.svg",
+            "../img/icons/github.svg"
+        ];
+        const privacypolicy = ["Privacy Policy by TermsFeed"];
+
+        document.querySelector(".footer").innerHTML = footername
+            .map(name => {
+                return `
+                    <p>Copyrights &copy; ${name}</p>
+                    ${imagesrc
+                        .map(src => `<img src="${src}" alt="social media icon" loading="lazy" fetchpriority="low">`)
+                        .join("")}
+                    <a href="/privacy.html">${privacypolicy[0]}</a>
+                `;
+            })
+            .join("");
+    </script>
 </footer>
+
 </html>
