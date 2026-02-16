@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'BitcountGridSingle_Roman-Light';
+    src: url('../font/BitcountGridSingle_Roman-Light.woff') format(woff);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../font/Ubuntu-Regular.woff') format(woff);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin font-900{
+     font-family: 'BitcountGridSingle_Roman-Light', sans-serif;
+     font-weight: 900;
+}
+@mixin font-normal{
+    font-family: 'BitcountGridSingle_Roman-Light',sans-serif;
+    font-weight: 300;
+}
+
+@mixin font-ubuntu-normal{
+    font-family: 'Ubuntu-Regular',sans-serif;
+    font-weight: 300;
+}
