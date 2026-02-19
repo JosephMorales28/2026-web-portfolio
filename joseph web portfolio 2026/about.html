@@ -12,6 +12,7 @@
     <meta name="distribution" content="global">
     <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="/img/joseph2026.webp" as="image" fetchpriority="high">
     <script type="speculationrules">
        {
             "prerender": [ 
@@ -27,7 +28,7 @@
     </script>
     <title>Joseph Web Portfolio 2026 -About Me</title>
 </head>
-<body>
+<body id="index">
     <header>
         <div class="logo">
             <picture>
@@ -54,4 +55,28 @@
         <a href="#index">&uarr; Back on top</a>
     </button>
 </body>
+<footer>
+    <div class="footer"></div>
+
+    <script>
+        const footername = ["Joseph Morales"];
+        const imagesrc = [
+            "../img/icons/behance.svg",
+            "../img/icons/github.svg"
+        ];
+        const privacypolicy = ["Privacy Policy by TermsFeed"];
+
+        document.querySelector(".footer").innerHTML = footername
+            .map(name => {
+                return `
+                    <p>Copyrights &copy; ${name}</p>
+                    ${imagesrc
+                        .map(src => `<img src="${src}" alt="social media icon" loading="lazy" fetchpriority="low">`)
+                        .join("")}
+                    <a href="/privacy.html">${privacypolicy[0]}</a>
+                `;
+            })
+            .join("");
+    </script>
+</footer>
 </html>
