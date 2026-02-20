@@ -13,9 +13,14 @@
     <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="css/style.css" as="style"/>
-    <link rel="preload" href="js/script.js" as="script"/>
     <link rel="preconnect" href="http://127.0.0.1:5500/index.html">
     <link rel="preload" href="/img/joseph2026.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/icons/adobephotoshop.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/icons/canvaapp.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/icons/figma.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/icons/visualstudiocode.svg" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/icons/github.svg" as="image" fetchpriority="low">
+    <link rel="preload" href="/img/icons/behance.svg" as="image" fetchpriority="low">
     <script src="js/script.js" defer></script>
     <script type="speculationrules">
        {
@@ -58,27 +63,6 @@
 </body>
 <footer>
     <div class="footer"></div>
-
-    <script>
-        const footername = ["Joseph Morales"];
-        const imagesrc = [
-            "../img/icons/behance.svg",
-            "../img/icons/github.svg"
-        ];
-        const privacypolicy = ["Privacy Policy by TermsFeed"];
-
-        document.querySelector(".footer").innerHTML = footername
-            .map(name => {
-                return `
-                    <p>Copyrights &copy; ${name}</p>
-                    ${imagesrc
-                        .map(src => `<img src="${src}" alt="social media icon" loading="lazy" fetchpriority="low">`)
-                        .join("")}
-                    <a href="/privacy.html">${privacypolicy[0]}</a>
-                `;
-            })
-            .join("");
-    </script>
 </footer>
 
 </html>
