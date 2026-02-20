@@ -73,7 +73,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    top:250px;
+    top:270px;
     left:350px;
     padding:1rem;
     width:850px;
@@ -82,10 +82,10 @@ nav{
     border-radius: .50rem;
     img{
         position:absolute;
-        top:-125px;
-        left:350px;
-        width:150px;
-        height:150px;
+        top:-160px;
+        left:325px;
+        width:184px;
+        height:184px;
         border:2px solid c.$fontcolor;
         border-radius: 100%;
     }
@@ -138,13 +138,15 @@ main{
                 } 
         }
         .portfolio-description{
-            color:c.$fontcolor;
             margin-left:1rem;
             h2{
                 @include f.font-900;
             }
             p{
                 @include f.font-ubuntu-normal;
+            }
+            :is(h2,p){
+               color:c.$fontcolor;
             }
         }
         .portfolio-link{
@@ -190,12 +192,11 @@ button:hover{
     padding:1rem;
     border:0 solid transparent;
     border-radius: 10px;
-    color: c.$fontcolor;
     transition: all 0.3s ease-in-out;
     z-index: 1;
-    a{
-        color: c.$fontcolor;
-    }
+}
+:is(button:hover>a){
+    color:c.$fontcolor;
 }
 
 section{
@@ -217,8 +218,10 @@ section{
         grid-template-columns:2fr 1fr;
         gap:1rem;
         .software-item{
-           h2{
+           :is(h2,p){
                color:c.$fontcolor;
+           }
+           h2{
                padding-bottom: 1.10rem;
                @include f.font-900;
            }
@@ -235,7 +238,6 @@ section{
            }
            p{
             width:350px;
-            color:c.$fontcolor;
             @include f.font-ubuntu-normal;
            }
         }
