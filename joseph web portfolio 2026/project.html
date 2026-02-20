@@ -57,26 +57,7 @@
 </body>
 <footer>
     <div class="footer"></div>
-
-    <script>
-        const footername = ["Joseph Morales"];
-        const imagesrc = [
-            "../img/icons/behance.svg",
-            "../img/icons/github.svg"
-        ];
-        const privacypolicy = ["Privacy Policy by TermsFeed"];
-
-        document.querySelector(".footer").innerHTML = footername
-            .map(name => {
-                return `
-                    <p>Copyrights &copy; ${name}</p>
-                    ${imagesrc
-                        .map(src => `<img src="${src}" alt="social media icon" loading="lazy" fetchpriority="low">`)
-                        .join("")}
-                    <a href="/privacy.html">${privacypolicy[0]}</a>
-                `;
-            })
-            .join("");
-    </script>
+    
+    <script type="module" src="js/footer.js"></script>
 </footer>
 </html>
