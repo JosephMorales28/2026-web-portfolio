@@ -5,7 +5,7 @@ export function exp_main_func(){
         const myDescription="My First Project";
         const myParagraph="This is my first project in web development and graphic design";
         const imgAlt="projects picture";
-        const project_link="&#1057;";
+        const project_link="visit";
         
         return `
             <main role="main">
@@ -13,48 +13,42 @@ export function exp_main_func(){
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="#" type="image/jpg">
-                           <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="img/sample.webp" type="image/webp">
+                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
                        <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p>
-                    </div>
-                    <div class="portfolio-link">
-                        <a href="#">${project_link}</a>
+                       <p>${myParagraph}</p></br>
+                       <a href="#">${project_link}</a>
                     </div>
                 </div>
 
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="#" type="image/jpg">
-                           <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="img/sample.webp" type="image/webp">
+                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
                        <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p>
-                    </div>
-                    <div class="portfolio-link">
-                        <a href="#">${project_link}</a>
+                       <p>${myParagraph}</p></br>
+                       <a href="#">${project_link}</a>
                     </div>
                 </div>
 
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="#" type="image/jpg">
-                           <img src="#" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="img/sample.webp" type="image/webp">
+                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
                        <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p>
-                    </div>
-                    <div class="portfolio-link">
-                        <a href="#">${project_link}</a>
+                       <p>${myParagraph}</p></br>
+                       <a href="#">${project_link}</a>
                     </div>
                 </div>
             </main>
@@ -92,7 +86,7 @@ export function exp_main_func(){
     }
     else if (window.location.pathname.endsWith("contact.html")){
         const contactTitle="Contact Me";
-        const contactParagraph="I'd love to hear from you! Whether you have a question about my services, want to discuss a potential project, or just want to say hello, feel free to reach out. You can contact me via email at [your email address] or connect with me on social media. I look forward to connecting with you!";
+        const contactParagraph="I'd love to hear from you! Whether you have a question about my services, want to discuss a potential project, or just want to say hello, feel free to reach out. You can contact me via email at <a href='https://gmail.com/'>josephmo2893@gmail.com</a> or connect with me on social media. I look forward to connecting with you!";
         return `
             <main role="main">
                 <h1 id="contact">${contactTitle}</h1>
@@ -101,9 +95,3 @@ export function exp_main_func(){
         `;
     }
 }
-
-
-
-
-
-
