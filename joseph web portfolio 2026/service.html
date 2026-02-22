@@ -39,6 +39,20 @@
         </div>
         <div>
              <ul class="header-link"></ul>
+                <label for="Menu">
+                       <select id="Menu">
+                           <option value="index.html">Home</option>
+                           <option value="about.html">About</option>
+                           <option value="project.html">Projects</option>
+                           <option value="service.html">Service</option>
+                           <option value="contact.html">Contact</option>
+                       </select>
+                </label>
+                <script>
+                     document.getElementById("Menu").addEventListener("change", function () {
+                        window.location.href = this.value;
+                    });
+                </script>
              <div class="btnResume">
                  <a href="Joseph Anthony V Morales resume 2026.docx" download>Resume Download</a>
              </div>
