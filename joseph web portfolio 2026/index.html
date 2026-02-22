@@ -13,14 +13,7 @@
     <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="css/style.css" as="style"/>
-    <link rel="preconnect" href="http://127.0.0.1:5500/index.html">
     <link rel="preload" href="/img/joseph2026.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="/img/icons/adobephotoshop.svg" as="image" fetchpriority="high">
-    <link rel="preload" href="/img/icons/canvaapp.svg" as="image" fetchpriority="high">
-    <link rel="preload" href="/img/icons/figma.svg" as="image" fetchpriority="high">
-    <link rel="preload" href="/img/icons/visualstudiocode.svg" as="image" fetchpriority="high">
-    <link rel="preload" href="/img/icons/github.svg" as="image" fetchpriority="low">
-    <link rel="preload" href="/img/icons/behance.svg" as="image" fetchpriority="low">
     <script src="js/script.js" defer></script>
     <script type="speculationrules">
        {
@@ -38,16 +31,31 @@
     <header>
         <div class="logo">
             <picture>
-                <source srcset="../img/logo.svg" type="image/svg">
+                <source srcset="../img/logo.svg" type="image/svg+xml">
                 <img src="../img/logo.svg" alt="logo" loading="lazy" fetchpriority="high">
             </picture>
         </div>
-        <ul class="header-link">
-        </ul>
-        <div class="btnResume">
-            <a href="Joseph Anthony V Morales resume 2026.docx" download>Resume Download</a>
+        <div>
+             <ul class="header-link"></ul>
+                <label for="Menu">
+                       <select id="Menu">
+                           <option value="index.html">Home</option>
+                           <option value="about.html">About</option>
+                           <option value="project.html">Projects</option>
+                           <option value="service.html">Service</option>
+                           <option value="contact.html">Contact</option>
+                       </select>
+                </label>
+                <script>
+                     document.getElementById("Menu").addEventListener("change", function () {
+                        window.location.href = this.value;
+                    });
+                </script>
+             <div class="btnResume">
+                 <a href="Joseph Anthony V Morales resume 2026.docx" download>Resume Download</a>
+             </div>
         </div>
-        <script>
+      <script>
             const menu=["Home", "About", "Projects", "Service", "Contact"];
             const link=["/index.html", "/about.html", "/project.html", "/service.html", "/contact.html"];
             
@@ -56,13 +64,14 @@
             }).join("");
         </script>
     </header>
-    <script type="module" src="js/index.js"></script>
+    <div id="app"></div>
     <button>
         <a href="#index">&uarr; Back on top</a>
     </button>
-</body>
 <footer>
     <div class="footer"></div>
+    <script type="module" src="js/footer.js"></script>
 </footer>
-
+<script type="module" src="js/index.js"></script>
+</body>
 </html>
