@@ -12,52 +12,66 @@
     <meta name="distribution" content="global">
     <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.css" as="style"/>
     <link rel="preload" href="/img/joseph2026.webp" as="image" fetchpriority="high">
+    <script src="js/script.js" defer></script>
     <script type="speculationrules">
        {
-            "prerender": [ 
+            "prefetch": [ 
                 {
-                    "source":"document",
-                    "where":{
-                        "href_matches":["^/index.html$","^/about.html$","^/service.html$","^/contact.html$"]
-                    },
+                    "urls":["/about.html", "/project.html","/service.html","/contact.html"],
                     "eagerness": "moderate" 
                 } 
-            ] 
+            ]
         }
     </script>
-    <title>Joseph Web Portfolio 2026 -Project</title>
+    <title>Joseph Web Portfolio 2026</title>
 </head>
 <body id="index">
     <header>
         <div class="logo">
             <picture>
-                <source srcset="../img/logo.svg" type="image/svg">
+                <source srcset="../img/logo.svg" type="image/svg+xml">
                 <img src="../img/logo.svg" alt="logo" loading="lazy" fetchpriority="high">
             </picture>
         </div>
-        <ul class="header-link">
-        </ul>
-        <div class="btnResume">
-            <a href="Joseph Anthony V Morales resume 2026.docx" download>Resume Download</a>
+        <div>
+             <ul class="header-link"></ul>
+                <label for="Menu">
+                       <select id="Menu">
+                           <option value="index.html">Home</option>
+                           <option value="about.html">About</option>
+                           <option value="project.html">Projects</option>
+                           <option value="service.html">Service</option>
+                           <option value="contact.html">Contact</option>
+                       </select>
+                </label>
+                <script>
+                     document.getElementById("Menu").addEventListener("change", function () {
+                        window.location.href = this.value;
+                    });
+                </script>
+             <div class="btnResume">
+                 <a href="Joseph Anthony V Morales resume 2026.docx" download>Resume Download</a>
+             </div>
         </div>
-            <script>
-                const menu=["Home", "About", "Projects", "Service", "Contact"];
-                const link=["/index.html", "/about.html", "/project.html", "/service.html", "/contact.html"];
-                
-                document.querySelector(".header-link").innerHTML=menu.map((item,index)=>{
-                    return `<li><a href="${link[index]}">${item}</a></li>`;
-                }).join("");
-            </script>
+      <script>
+            const menu=["Home", "About", "Projects", "Service", "Contact"];
+            const link=["/index.html", "/about.html", "/project.html", "/service.html", "/contact.html"];
+            
+            document.querySelector(".header-link").innerHTML=menu.map((item,index)=>{
+                return `<li><a href="${link[index]}">${item}</a></li>`;
+            }).join("");
+        </script>
     </header>
-    <script type="module" src="js/index.js"></script>
+    <div id="app"></div>
     <button>
         <a href="#index">&uarr; Back on top</a>
     </button>
-</body>
 <footer>
     <div class="footer"></div>
-    
     <script type="module" src="js/footer.js"></script>
 </footer>
+<script type="module" src="js/index.js"></script>
+</body>
 </html>
