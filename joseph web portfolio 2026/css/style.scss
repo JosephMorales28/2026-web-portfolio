@@ -7,7 +7,15 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+html,body{
+    height: 100%;
+}
 body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top:5px;
+    min-height: 100vh;
     background-image: url('../img/background.webp');
 }
 /* The `header` styling block in the SCSS code is defining the styles for a header section of a
@@ -16,158 +24,198 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position:absolute;
-    top:25px;
+    position:fixed;
+    width:100%;
+    z-index:1;
     background-color: c.$headerbg;
     border: 2px solid c.$header;
     border-radius: .50rem;
-    margin-left:350px;
-    width:850px;
     .logo{
         img{
            width:50px;
-           height: 50px;
+           min-height:auto;
+           object-fit: cover;
         }
     }
-    ul, .header-link{
+    div{
+       display:flex;
+       justify-content: flex-end;
+       ul{
         list-style-type: none;
-        color:c.$fontcolor;
-        @include f.font-900;
         li{
-           display: inline;
-           margin:0 15px;
-           text-transform: uppercase;
+            display:inline-block;
+            padding:1rem;
+        }
+        @media(max-width:500px){
+            li{
+                display:none;
+                padding:1rem;
+            }
         }
         li a{
             text-decoration: none;
-            color:c.$fontcolor;
+            padding:.50rem;
         }
-    }
-    .btnResume{
-        background: c.$secondaryfontcolor;
-        color:c.$fontcolor;
+        li a:hover{
+            background-color: c.$secondaryfontcolor;
+            color:c.$header;
+            padding:.50rem;
+            border-radius:10px;
+            corner-shape:squircle;
+        }
+       }
+       :is(ul,li,li a){
+           color:c.$fontcolor;
+           @include f.font-normal;
+       }
+       label{
+        display: none;
         padding:.50rem;
-        border: 0 solid transparent;
-        border-radius:5px;
-        margin-right: 1rem;
-        @include f.font-normal;
-        a{
-            text-decoration: none;
+          #Menu{
+                 padding:.50rem;
+                 border:none;
+                 border-radius:10px;
+          }
+          :is(#Menu,option){
+            background-color: c.$secondaryfontcolor;
+            @include f.font-normal;
             color:c.$fontcolor;
+            text-transform: uppercase;
+          }
         }
-    }
-    .btnResume:hover{
-        background: c.$fontcolor;
-        transition: all 0.3s ease-in-out;
-        a{
-            text-decoration: none;
-            color: c.$headerbgone;
+        @media(max-width:500px){
+            label{
+                display:block;
+                padding:.50rem;
+                #Menu{
+                    padding:.50rem;
+                    border:none;
+                    border-radius:10px;
+                }
+                :is(#Menu,option){
+                    background-color: c.$secondaryfontcolor;
+                    @include f.font-normal;
+                    color:c.$fontcolor;
+                    text-transform: uppercase;
+                }
+            }
         }
+       .btnResume{
+           margin-right:10px;
+           align-items: center;
+           a{
+               text-decoration: none;
+               background-color: c.$secondaryfontcolor;
+               padding:.50rem;
+               border-radius: 10px;
+               corner-shape:squircle;
+            }
+           a:hover{
+               background-color: c.$fontcolor;
+               color:c.$headerbgone;
+            }
+       }
+       :is(.btnResume>a ){
+           color:c.$fontcolor;
+           @include f.font-normal;
+       }
     }
 }
 
 /* The `nav` styling block in the SCSS code is defining the styles for a navigation section of a
 webpage. Here's a breakdown of what each property is doing: */
 nav{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top:270px;
-    left:350px;
-    padding:1rem;
-    width:850px;
+    margin-top:3.5rem;
     background-color: c.$headerbg;
     border: 2px solid c.$header;
     border-radius: .50rem;
-    img{
-        position:absolute;
-        top:-160px;
-        left:325px;
-        width:184px;
-        height:184px;
-        border:2px solid c.$fontcolor;
-        border-radius: 100%;
-    }
-    h1,h2{
-        @include f.font-normal;
-        color:c.$fontcolor;
-        padding:1rem;
-    }
-    h2{
-        margin-top:-25px;
-        font-size: 1rem;
-        color: c.$secondaryfontcolor;
-    }
-    p{
-        color:c.$fontcolor;
-        text-align: center;
-        width:350px;
-        @include f.font-ubuntu-normal;
+    .profile{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:clamp(2rem, 30vw,6rem);
+        .profile-pic{
+            img{
+                width:clamp(150px, 30vw, 300px);
+                height:auto;
+                object-fit: cover;
+                border:2px solid c.$fontcolor;
+                border-radius: 100%;
+            }
+        }
+        .profile-info{
+            :is(h1,p){
+                 color:c.$fontcolor;
+            }
+            :is(h1,h2){
+                 @include f.font-normal;
+                 padding:1rem;
+            }
+            h1{
+                font-size:2.5rem;
+                font-weight: bold;
+            }
+            h2{
+                 color:c.$secondaryfontcolor;
+                 font-size: 1rem;
+                 margin-top: -30px;
+            }
+            p{
+                 @include f.font-ubuntu-normal;
+            }
+        }
     }
 }
 
-main{    
-    position: absolute;
-    top:500px;
-    left:350px;
-    padding:1rem;
-    width:850px;
+main{
+    flex:1;
+    padding:2rem;
     background-color: c.$headerbg;
     border: 2px solid c.$header;
     border-radius: .50rem;
+    p{
+        color:c.$fontcolor;
+        @include f.font-ubuntu-normal
+    }
     h1{
         color: c.$secondaryfontcolor;
         padding-bottom: 5px;
         @include f.font-900;
     }
     .portfolio-section{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: minmax(300px,1fr);
         padding:1rem;
-        margin-bottom:10px;
-        background-color: c.$header;
-        border: 2px solid c.$headerbgone;
+        border: 2px solid transparent;
         border-radius: 10px;
         .portfolio-img{
+            padding-bottom:2rem;
                 img{
-                    width:700px;
-                    height:400px;
-                    border:2px solid c.$fontcolor;
+                    width:clamp(380px, 50vw,38.75rem);
+                    height:auto;
+                    border-radius: 10px;
+                    corner-shape: squircle;
+                    box-shadow: 0 0 4px c.$fontcolor;
+                    object-fit: cover;
                 } 
         }
         .portfolio-description{
-            margin-left:1rem;
+            position:relative;
             h2{
                 @include f.font-900;
             }
             p{
                 @include f.font-ubuntu-normal;
             }
-            :is(h2,p){
+            :is(h2,p,a){
                color:c.$fontcolor;
             }
-        }
-        .portfolio-link{
-            position: absolute;
-            align-items: center;
-            margin-left:1rem;
-            left:750px;
-            padding:1rem;
-            background-color: c.$secondaryfontcolor;
-            border:0 solid transparent;
             a{
                 text-decoration: none;
-                color:c.$fontcolor;
+                background-color: c.$secondaryfontcolor;
+                padding:.50rem;
             }
         }
-    }
-    p{
-        color:c.$fontcolor;
-        width:800px;
-        text-align: justify;
-        @include f.font-ubuntu-normal;
     }
 }
 button{
@@ -200,9 +248,7 @@ button:hover{
 }
 
 section{
-    position: absolute;
-    top:930px;
-    left:350px;
+    display: none;
     padding:1rem;
     width:850px;
     background-color: c.$headerbg;
@@ -245,8 +291,6 @@ section{
 }
 
 footer{
-    position: absolute;
-    bottom:-850px;
     width:100%;
     padding:1rem;
     background-color: c.$secondaryfontcolor;
@@ -268,7 +312,7 @@ footer{
         img{
             width:30px;
             height:30px;
-            background-color: none;
+            background-color: transparent;
         }
     }
 }
