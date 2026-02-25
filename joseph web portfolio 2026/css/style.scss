@@ -116,7 +116,7 @@ header{
             }
        }
        :is(.btnResume>a ){
-           color:c.$fontcolor;
+           color:c.$headerbgone;
            @include f.font-normal;
        }
     }
@@ -125,7 +125,7 @@ header{
 /* The `nav` styling block in the SCSS code is defining the styles for a navigation section of a
 webpage. Here's a breakdown of what each property is doing: */
 nav{
-    margin-top:3.5rem;
+    margin-top:clamp(1.5rem,25vh,3.5rem);
     background-color: c.$headerbg;
     border: 2px solid c.$header;
     border-radius: .50rem;
@@ -136,7 +136,7 @@ nav{
         padding:clamp(2rem, 30vw,6rem);
         .profile-pic{
             img{
-                width:clamp(150px, 30vw, 300px);
+                width:clamp(150px, 30vw, 371px);
                 height:auto;
                 object-fit: cover;
                 border:2px solid c.$fontcolor;
@@ -287,6 +287,57 @@ section{
             @include f.font-ubuntu-normal;
            }
         }
+    }
+}
+
+article{
+    padding:1rem;
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+        padding:1.5rem;
+        #search{
+            padding:1.5rem;
+            border:0 solid transparent;
+            border-radius: 10px;
+            corner-shape:squircle;
+            width:70%;
+            color:c.$headerbgone;
+        }
+        #submit{
+            padding:1.5rem;
+            border: 0 solid transparent;
+            border-radius:10px;
+            corner-shape:squircle;
+            width:20%;
+            background-color: c.$secondaryfontcolor;
+        }
+        @media (max-width:500px) {
+         #search{
+            padding:1rem;
+            border:0 solid transparent;
+            border-radius: 10px;
+            corner-shape:squircle;
+            width:70%;
+            color:c.$headerbgone;
+        }
+        #submit{
+            padding:1rem;
+            border: 0 solid transparent;
+            border-radius:10px;
+            corner-shape:squircle;
+            width:30%;
+            background-color: c.$secondaryfontcolor;
+        }   
+        }
+    }
+    :is(#search,#submit){
+       @include f.font-normal;
+       color:c.$fontcolor;
+       text-transform: uppercase;
+       font-weight: bolder;
     }
 }
 
