@@ -6,13 +6,20 @@ export function exp_nav_func(){
     
     return `
          <nav role="navigation">
-                <picture>
-                        <source srcset="../img/joseph2026.webp" type="image/webp">
-                        <img src="../img/joseph2026.webp" alt="${imgAlt}" loading="lazy" fetchpriority="high">
-                </picture>
-                <h1>${myName}</h1>
-                <h2>${myPosition}</h2>
-                <p>${myBio}</p>
+                <div class="profile">
+                   <div class="profile-pic">
+                       <picture>
+                           <source srcset="../img/joseph2026_150x150.webp" media="(max-width:150px)" type="image/webp">
+                           <source srcset="../img/joseph2026_300x300.webp" media="(max-width:300px)" type="image/webp">
+                           <img src="../img/joseph2026_300x300.webp" alt="${imgAlt}" fetchpriority="high">
+                       </picture>
+                   </div>
+                   <div class="profile-info">
+                       <h1>${myName}</h1>
+                       <h2>${myPosition}</h2>
+                       <p>${myBio}</p>
+                   </div>
+                </div>
         </nav>
     `;
 }
