@@ -13,7 +13,7 @@
     <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="css/style.css" as="style"/>
-    <link rel="preload" href="/img/joseph2026.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="/img/joseph2026_300x300.webp" as="image" fetchpriority="high">
     <script src="js/script.js" defer></script>
     <script type="speculationrules">
        {
@@ -38,7 +38,7 @@
         <div>
              <ul class="header-link"></ul>
                 <label for="Menu">
-                       <select id="Menu">
+                       <select id="Menu" aria-labelledby="Menu">
                            <option value="index.html">Home</option>
                            <option value="about.html">About</option>
                            <option value="project.html">Projects</option>
@@ -65,6 +65,12 @@
         </script>
     </header>
     <div id="app"></div>
+    <article>
+        <form>
+            <input type="search" placeholder="your email" id="search">
+            <input type="submit" value="Email Send" id="submit">
+        </form>
+    </article>
     <button>
         <a href="#index">&uarr; Back on top</a>
     </button>
