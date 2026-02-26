@@ -66,7 +66,8 @@ header{
        }
        :is(ul,li,li a){
            color:c.$fontcolor;
-           @include f.font-normal;
+           @include f.font-BricolageGrotesque;
+           letter-spacing:2.5px;
        }
        label{
         display: none;
@@ -78,7 +79,7 @@ header{
           }
           :is(#Menu,option){
             background-color: c.$secondaryfontcolor;
-            @include f.font-normal;
+            @include f.font-BricolageGrotesque;
             color:c.$fontcolor;
             text-transform: uppercase;
           }
@@ -94,9 +95,10 @@ header{
                 }
                 :is(#Menu,option){
                     background-color: c.$secondaryfontcolor;
-                    @include f.font-normal;
+                    @include f.font-BricolageGrotesque;
                     color:c.$fontcolor;
                     text-transform: uppercase;
+                    letter-spacing: 2px;
                 }
             }
         }
@@ -105,19 +107,19 @@ header{
            align-items: center;
            a{
                text-decoration: none;
-               background-color: c.$secondaryfontcolor;
+               background: c.$gradientone;
                padding:.50rem;
                border-radius: 10px;
                corner-shape:squircle;
             }
            a:hover{
-               background-color: c.$fontcolor;
+               background: c.$gradienttwo;
                color:c.$headerbgone;
             }
        }
        :is(.btnResume>a ){
            color:c.$headerbgone;
-           @include f.font-normal;
+           @include f.font-BricolageGrotesque;
        }
     }
 }
@@ -136,7 +138,7 @@ nav{
         padding:clamp(2rem, 30vw,6rem);
         .profile-pic{
             img{
-                width:clamp(150px, 30vw, 371px);
+                width:clamp(150px, 30vw, 300px);
                 height:auto;
                 object-fit: cover;
                 border:2px solid c.$fontcolor;
@@ -144,24 +146,28 @@ nav{
             }
         }
         .profile-info{
-            :is(h1,p){
-                 color:c.$fontcolor;
-            }
-            :is(h1,h2){
+            h2{
                  @include f.font-normal;
                  padding:1rem;
             }
             h1{
-                font-size:2.5rem;
+                font-size:clamp(1rem, 50vw, 5rem);
                 font-weight: bold;
+                @include f.font-BricolageGrotesque;
+                letter-spacing: -1.5px;
+                background: c.$gradientone;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color:transparent;
             }
             h2{
                  color:c.$secondaryfontcolor;
                  font-size: 1rem;
-                 margin-top: -30px;
+                 margin-top: -20px;
+                 margin-left:0;
             }
             p{
                  @include f.font-ubuntu-normal;
+                 color:c.$fontcolor;
             }
         }
     }
@@ -180,7 +186,8 @@ main{
     h1{
         color: c.$secondaryfontcolor;
         padding-bottom: 5px;
-        @include f.font-900;
+        @include f.font-BricolageGrotesque;
+        font-size: 4rem;
     }
     .portfolio-section{
         display: grid;
@@ -202,7 +209,8 @@ main{
         .portfolio-description{
             position:relative;
             h2{
-                @include f.font-900;
+                @include f.font-BricolageGrotesque;
+                font-size: 2rem;
             }
             p{
                 @include f.font-ubuntu-normal;
@@ -290,7 +298,7 @@ section{
     }
 }
 
-article{
+aside{
     padding:1rem;
     form{
         display: flex;
@@ -312,7 +320,7 @@ article{
             border-radius:10px;
             corner-shape:squircle;
             width:20%;
-            background-color: c.$secondaryfontcolor;
+            background: c.$gradientone;
         }
         @media (max-width:500px) {
          #search{
@@ -329,12 +337,12 @@ article{
             border-radius:10px;
             corner-shape:squircle;
             width:30%;
-            background-color: c.$secondaryfontcolor;
+            background: c.$gradientone;
         }   
         }
     }
     :is(#search,#submit){
-       @include f.font-normal;
+       @include f.font-BricolageGrotesque;
        color:c.$fontcolor;
        text-transform: uppercase;
        font-weight: bolder;
