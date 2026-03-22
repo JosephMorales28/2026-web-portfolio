@@ -157,6 +157,7 @@ nav{
                 letter-spacing: -1.5px;
                 background: c.$gradientone;
                 -webkit-background-clip: text;
+                background-clip: text;
                 -webkit-text-fill-color:transparent;
             }
             h2{
@@ -256,45 +257,60 @@ button:hover{
 }
 
 section{
-    display: none;
-    padding:1rem;
-    width:850px;
+    padding:3rem;
     background-color: c.$headerbg;
     border: 2px solid c.$header;
     border-radius: .50rem;
     h1{
-        color: c.$secondaryfontcolor;
-        padding-bottom: 5px;
-        @include f.font-900;
+        color:c.$fontcolor;
     }
     .software-list{
-        display: grid;
-        grid-template-columns:2fr 1fr;
-        gap:1rem;
-        .software-item{
-           :is(h2,p){
-               color:c.$fontcolor;
-           }
+       display:grid;
+       grid-template-columns: repeat(2, 1fr);
+       .software-item{
+           margin:1rem;
+           margin-left: -1rem;
            h2{
-               padding-bottom: 1.10rem;
-               @include f.font-900;
-           }
-           img{
-            display: inline-block;
-            position: relative;
-            top:20px;
-            width:50px;
-            height:50px;
-            padding:10px;
-            background-color: c.$secondaryfontcolor;
-            border:0 solid transparent;
-            border-radius: 5px;
-           }
-           p{
-            width:350px;
-            @include f.font-ubuntu-normal;
-           }
-        }
+               color:c.$fontcolor;
+            }
+            img{
+                width:32px;
+                height:32px;
+                background: c.$gradientone;
+                border:0 solid transparent;
+                border-radius: 15px;
+                corner-shape: squircle;
+            }
+            p{
+                color:c.$fontcolor;
+                margin:5px;
+            }
+       }
+    }
+    @media (max-width:500px){
+    .software-list{
+       display:grid;
+       grid-template-columns: repeat(1, 1fr);
+       .software-item{
+           margin:1rem;
+           margin-left: -1rem;
+           h2{
+               color:c.$fontcolor;
+            }
+            img{
+                width:32px;
+                height:32px;
+                background: c.$gradientone;
+                border:0 solid transparent;
+                border-radius: 15px;
+                corner-shape: squircle;
+            }
+            p{
+                color:c.$fontcolor;
+                margin:5px;
+            }
+       }
+    }
     }
 }
 
