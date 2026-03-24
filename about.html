@@ -19,7 +19,7 @@
                 {
                     "source":"document",
                     "where":{
-                        "href_matches":["^/index.html$","^/projects.html$","^/service.html$","^/contact.html$"]
+                        "href_matches":["^/index.html$","^/projects.html$","^/service.html$","^/blog.html$",^/contact.html$"]
                     },
                     "eagerness": "moderate" 
                 } 
@@ -44,6 +44,7 @@
                            <option value="about.html">About</option>
                            <option value="project.html">Projects</option>
                            <option value="service.html">Service</option>
+                           <option value="blog.html">Blog</option>
                            <option value="contact.html">Contact</option>
                        </select>
             </label>
@@ -57,8 +58,8 @@
              </div>
         </div>
       <script>
-            const menu=["Home", "About", "Projects", "Service", "Contact"];
-            const link=["/index.html", "/about.html", "/project.html", "/service.html", "/contact.html"];
+            const menu=["Home", "About", "Projects", "Service", "Blog", "Contact"];
+            const link=["/index.html", "/about.html", "/project.html", "/service.html", "/blog.html","/contact.html"];
             
             document.querySelector(".header-link").innerHTML=menu.map((item,index)=>{
                 return `<li><a href="${link[index]}">${item}</a></li>`;

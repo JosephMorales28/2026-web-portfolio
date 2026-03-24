@@ -69,4 +69,12 @@ export function exp_section_func(){
         
         `;
     }
+
+    else if(window.location.pathname.endsWith("blog.html")){
+        return `
+        
+        `;
+    }
+
+    return "";
 }

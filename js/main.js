@@ -84,6 +84,16 @@ export function exp_main_func(){
             </main>
         `;
     }
+    else if (window.location.pathname.endsWith("blog.html")){
+        const blogTitle="Blog";
+
+        return `
+           <main role="main">
+              <h1>${blogTitle}</h1>
+              this is blog
+           </main>
+        `;
+    }
     else if (window.location.pathname.endsWith("contact.html")){
         const contactTitle="Contact Me";
         const contactParagraph="I'd love to hear from you! Whether you have a question about my services, want to discuss a potential project, or just want to say hello, feel free to reach out. You can contact me via email at <a href='https://gmail.com/'>josephmo2893@gmail.com</a> or connect with me on social media. I look forward to connecting with you!";
@@ -94,4 +104,6 @@ export function exp_main_func(){
             </main>
         `;
     }
+
+    return "";
 }
