@@ -41,7 +41,7 @@ else if (window.location.pathname.endsWith("blog.html")){
         `;
     }
 ```
-###update on `nav.js`
+### Update on `nav.js`
 ```javascript
 export function exp_nav_func(){
 
