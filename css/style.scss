@@ -228,8 +228,8 @@ main{
     }
     #blog{
         img{
-            width:800px;
-            height:400px;
+            width:clamp(425px, 50vw,800px);
+            height:clamp(200px, 50vw,400px);
         }
         figcaption{
             color:c.$fontcolor;
