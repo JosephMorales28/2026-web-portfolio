@@ -226,6 +226,19 @@ main{
             }
         }
     }
+    #blog{
+        img{
+            width:800px;
+            height:400px;
+        }
+        figcaption{
+            color:c.$fontcolor;
+        }
+        h2{
+            color:c.$secondaryfontcolor;
+            @include f.font-BricolageGrotesque;
+        }
+    }
 }
 button{
     position:fixed;

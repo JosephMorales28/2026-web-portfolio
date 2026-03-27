@@ -1,13 +1,13 @@
-# New Release on 2026 webportfolio v1.1.4#
+# New Release on 2026 webportfolio v1.1.4
 ![Banner](img/banner/websiteportfoliov1.1.4.webp)
 
 ### Features in `v1.1.4`
-- add Blog site and update Script by [@JosephMorales28](https:/github.com/JosephMorales28)
-- fixed bugs on script by [@JosephMorales28](https:/github.com/JosephMorales28)
+- add Blog site and update Script by [@JosephMorales28](https://github.com/JosephMorales28)
+- fixed bugs on script by [@JosephMorales28](https://github.com/JosephMorales28)
 
 ### Authors and Buy me a Coffee
 
-[@JosephMorales28](https:/github.com/JosephMorales28)
+[@JosephMorales28](https://github.com/JosephMorales28)
 
 ### Installation
 click the Assets on the release version of v1.1.4 in github release or on the code button Download ZIP release version of `v1.1.4`
@@ -19,14 +19,74 @@ Open VsCode Terminal `powershell`
 ```
 ### Update on `main.js`
 ```javascript
-    else if (window.location.pathname.endsWith("blog.html")){
-        const blogTitle="Blog";
 
+else if (window.location.pathname.endsWith("blog.html")){
+        const blogTitle="Blog";
         return `
            <main role="main">
+              <div id="blog">
               <h1>${blogTitle}</h1>
-              this is blog
+                 <figure>
+                    <picture>
+                       <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/Webp">
+                       <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                    </picture>
+                    <figcaption>Release version of 1.1.4</figcaption>
+                 <figure>
+             <h2>Features:</h2>
+             <p>- add blog site and update the script.</p>
+             <p>- fix error bug script
+              </div>
            </main>
         `;
     }
+```
+###update on `nav.js`
+```javascript
+export function exp_nav_func(){
+
+    if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+
+    const myName="Joseph Anthony V. Morales";
+    const myPosition="Web Development | Graphic Design";
+    const myBio="Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.";
+    const imgAlt="profile picture";
+    
+    return `
+         <nav role="navigation">
+                <div class="profile">
+                   <div class="profile-pic">
+                       <picture>
+                           <source srcset="../img/joseph2026_150x150.webp" media="(max-width:150px)" type="image/webp">
+                           <source srcset="../img/joseph2026_300x300.webp" media="(max-width:300px)" type="image/webp">
+                           <img src="../img/joseph2026_300x300.webp" alt="${imgAlt}" fetchpriority="high">
+                       </picture>
+                   </div>
+                   <div class="profile-info">
+                       <h1>${myName}</h1>
+                       <h2>${myPosition}</h2>
+                       <p>${myBio}</p>
+                   </div>
+                </div>
+        </nav>
+    `;
+   }
+   else if (window.location.pathname.endsWith("about.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("project.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("service.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("blog.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("contact.html")){
+    return "";
+   }
+return "";
+}
+
 ```

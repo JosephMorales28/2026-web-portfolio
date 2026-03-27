@@ -1,4 +1,7 @@
 export function exp_nav_func(){
+
+    if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+
     const myName="Joseph Anthony V. Morales";
     const myPosition="Web Development | Graphic Design";
     const myBio="Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.";
@@ -22,4 +25,21 @@ export function exp_nav_func(){
                 </div>
         </nav>
     `;
+   }
+   else if (window.location.pathname.endsWith("about.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("project.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("service.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("blog.html")){
+    return "";
+   }
+   else if (window.location.pathname.endsWith("contact.html")){
+    return "";
+   }
+return "";
 }

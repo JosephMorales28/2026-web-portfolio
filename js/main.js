@@ -89,8 +89,19 @@ export function exp_main_func(){
 
         return `
            <main role="main">
+              <div id="blog">
               <h1>${blogTitle}</h1>
-              this is blog
+                 <figure>
+                    <picture>
+                       <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/Webp">
+                       <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                    </picture>
+                    <figcaption>Release version of 1.1.4</figcaption>
+                 <figure>
+             <h2>Features:</h2>
+             <p>- add blog site and update the script.</p>
+             <p>- fix error bug script
+              </div>
            </main>
         `;
     }
