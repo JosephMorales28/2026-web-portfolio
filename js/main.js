@@ -122,10 +122,10 @@ export function exp_main_func(){
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>
-                             <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
-                             <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                             <source srcset="img/banner/screenshot_v1.1.4.webp" type="image/webp">
+                             <img src="img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
-                          <figcaption>Release version of 1.1.4</figcaption>
+                          <figcaption>Screenshot version of 1.1.4</figcaption>
                        </figure>
                     </div>
                     <div id="blogright">

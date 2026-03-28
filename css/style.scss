@@ -229,8 +229,7 @@ main{
     #blog{
         #bloggrid{
             display:flex;
-            justify-content: space-evenly;
-        
+            justify-content: space-evenly;   
             #blogleft{
                 img{
                    width:clamp(425px, 50vw,800px);
@@ -244,6 +243,9 @@ main{
                    color:c.$secondaryfontcolor;
                    @include f.font-BricolageGrotesque;
                    padding-bottom: 1rem;
+                }
+                p{
+                    padding-bottom: 1rem;
                 }
             }
             #blogright{
@@ -261,6 +263,12 @@ main{
                         padding-bottom: 1rem;
                     }
                 }
+            }
+        }
+        @media (max-width:500px){
+            #bloggrid{
+                display: grid;
+                grid-template-columns: 1fr;
             }
         }
         ul,#blogmenu{
