@@ -227,16 +227,60 @@ main{
         }
     }
     #blog{
-        img{
-            width:clamp(425px, 50vw,800px);
-            height:clamp(200px, 50vw,400px);
+        #bloggrid{
+            display:flex;
+            justify-content: space-evenly;
+        
+            #blogleft{
+                img{
+                   width:clamp(425px, 50vw,800px);
+                   height:clamp(200px, 50vw,400px);
+                }
+                figcaption{
+                   color:c.$fontcolor;
+                   padding-bottom: 1rem;
+                }
+                h2{
+                   color:c.$secondaryfontcolor;
+                   @include f.font-BricolageGrotesque;
+                   padding-bottom: 1rem;
+                }
+            }
+            #blogright{
+                color:c.$fontcolor;
+                @include f.font-BricolageGrotesque;
+                text-align: left;
+                h2{
+                    color:c.$secondaryfontcolor;
+                    padding-bottom: 1rem;
+                }
+                ul{
+                    li{
+                        display: block;
+                        padding:0;
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
         }
-        figcaption{
-            color:c.$fontcolor;
-        }
-        h2{
-            color:c.$secondaryfontcolor;
-            @include f.font-BricolageGrotesque;
+        ul,#blogmenu{
+            padding-bottom: 1rem;
+            li{
+                list-style-type: none;
+                display: inline-block;
+                padding:1rem;
+                @include f.font-ubuntu-normal;
+                color: c.$fontcolor;
+            }
+            li a{
+                color:c.$fontcolor;
+                text-decoration: none;
+                padding:1rem;
+            }
+            li a:hover{
+                color:c.$secondaryfontcolor;
+                border:0 solid transparent;
+            }
         }
     }
 }

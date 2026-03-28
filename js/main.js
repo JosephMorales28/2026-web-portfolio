@@ -86,21 +86,54 @@ export function exp_main_func(){
     }
     else if (window.location.pathname.endsWith("blog.html")){
         const blogTitle="Blog";
+        const blogLinks=[
+            {label:"Version Patch", href:"/version_patch.html"},
+            {label:"Community", href:"/community.html"}
+        ];
+        const blogversion=["v1.1.4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
 
+        const blogMenuItems=blogLinks.map((item)=>{
+            return `<li><a href="${item.href}">${item.label}</a></li>`;
+        }).join("");
+
+        const blogversionlist=blogversion.map((item)=>{
+            return `<li>${item}</li>`;
+        }).join("");
+        
         return `
            <main role="main">
               <div id="blog">
-              <h1>${blogTitle}</h1>
-                 <figure>
-                    <picture>
-                       <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/Webp">
-                       <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
-                    </picture>
-                    <figcaption>Release version of 1.1.4</figcaption>
-                 <figure>
-             <h2>Features:</h2>
-             <p>- add blog site and update the script.</p>
-             <p>- fix error bug script
+                 <h1>${blogTitle}</h1>
+                 <ul id="blogmenu">
+                    ${blogMenuItems}
+                 </ul>
+                 <div id="bloggrid">
+                    <div id="blogleft">
+                       <figure>
+                          <picture>
+                             <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
+                             <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                          </picture>
+                          <figcaption>Release version of 1.1.4</figcaption>
+                       </figure>
+                       <h2>Features:</h2>
+                       <p>- add blog site and update the script.</p>
+                       <p>- fix error bug script.</p>
+                       <h2>Screenshot:</h2>
+                       <figure>
+                          <picture>
+                             <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
+                             <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                          </picture>
+                          <figcaption>Release version of 1.1.4</figcaption>
+                       </figure>
+                    </div>
+                    <div id="blogright">
+                        <h2>Version List:</h2>
+                        <ul>
+                            ${blogversionlist}
+                        </ul>
+                    </div>
               </div>
            </main>
         `;
