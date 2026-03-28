@@ -50,7 +50,7 @@ else if (window.location.pathname.endsWith("blog.html")){
                              <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
                              <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
-                          <figcaption>Release version of 1.1.4</figcaption>
+                          <figcaption>Release version of ${blogversion[0]}</figcaption>
                        </figure>
                        <h2>Features:</h2>
                        <p>- add blog site and update the script.</p>
@@ -61,7 +61,7 @@ else if (window.location.pathname.endsWith("blog.html")){
                              <source srcset="img/banner/screenshot_v1.1.4.webp" type="image/webp">
                              <img src="img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
-                          <figcaption>Screenshot version of 1.1.4</figcaption>
+                          <figcaption>Screenshot version of ${blogversion[0]}</figcaption>
                        </figure>
                     </div>
                     <div id="blogright">
