@@ -60,7 +60,7 @@
         </div>
       <script>
             const menu=["Home", "About", "Projects", "Service", "Blog", "Contact"];
-            const link=["/index.html", "/about.html", "/project.html", "/service.html","/blog.html", "/contact.html"];
+            const link=["index.html", "about.html", "project.html", "service.html","blog.html", "contact.html"];
             
             document.querySelector(".header-link").innerHTML=menu.map((item,index)=>{
                 return `<li><a href="${link[index]}">${item}</a></li>`;
@@ -79,8 +79,8 @@
     </button>
     <footer>
        <div class="footer"></div>
-           <script type="module" src="js/footer.js"></script>
+           <script type="module" src="./js/footer.js"></script>
     </footer>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
