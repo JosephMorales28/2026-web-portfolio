@@ -12,9 +12,9 @@ export function exp_nav_func(){
                 <div class="profile">
                    <div class="profile-pic">
                        <picture>
-                           <source srcset="../img/joseph2026_150x150.webp" media="(max-width:150px)" type="image/webp">
-                           <source srcset="../img/joseph2026_300x300.webp" media="(max-width:300px)" type="image/webp">
-                           <img src="../img/joseph2026_300x300.webp" alt="${imgAlt}" fetchpriority="high">
+                           <source srcset="./img/joseph2026_150x150.webp" media="(max-width:150px)" type="image/webp">
+                           <source srcset="./img/joseph2026_300x300.webp" media="(max-width:300px)" type="image/webp">
+                           <img src="./img/joseph2026_300x300.webp" alt="${imgAlt}" fetchpriority="high">
                        </picture>
                    </div>
                    <div class="profile-info">

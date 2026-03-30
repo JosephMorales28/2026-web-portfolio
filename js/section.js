@@ -17,10 +17,10 @@ export function exp_section_func(){
         ];
 
         const softwareicon=[
-            "../img/icons/visualstudiocode.svg",
-            "../img/icons/adobephotoshop.svg",
-            "../img/icons/figma.svg",
-            "../img/icons/canvaapp.svg"
+            "./img/icons/visualstudiocode.svg",
+            "./img/icons/adobephotoshop.svg",
+            "./img/icons/figma.svg",
+            "./img/icons/canvaapp.svg"
         ]
 
         let itemsHTML='';
