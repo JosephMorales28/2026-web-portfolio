@@ -1,8 +1,8 @@
 export const footername = "Joseph Morales";
 
 const imagesrc = [
-    "../img/icons/behance.svg",
-    "../img/icons/github.svg"
+    "./img/icons/behance.svg",
+    "./img/icons/github.svg"
 ];
 
 const privacypolicy = "Privacy Policy by TermsFeed";

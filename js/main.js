@@ -13,8 +13,8 @@ export function exp_main_func(){
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="img/sample.webp" type="image/webp">
-                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="./img/sample.webp" type="image/webp">
+                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
@@ -27,8 +27,8 @@ export function exp_main_func(){
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="img/sample.webp" type="image/webp">
-                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="./img/sample.webp" type="image/webp">
+                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
@@ -41,8 +41,8 @@ export function exp_main_func(){
                 <div class="portfolio-section">
                     <div class="portfolio-img">
                         <picture>
-                           <source srcset="img/sample.webp" type="image/webp">
-                           <img src="img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
+                           <source srcset="./img/sample.webp" type="image/webp">
+                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
                         </picture>
                     </div>
                     <div class="portfolio-description">
@@ -111,8 +111,8 @@ export function exp_main_func(){
                     <div id="blogleft">
                        <figure>
                           <picture>
-                             <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
-                             <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                             <source srcset="./img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
+                             <img src="./img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
                           <figcaption>Release version of ${blogversion[0]}</figcaption>
                        </figure>
@@ -122,8 +122,8 @@ export function exp_main_func(){
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>
-                             <source srcset="img/banner/screenshot_v1.1.4.webp" type="image/webp">
-                             <img src="img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                             <source srcset="./img/banner/screenshot_v1.1.4.webp" type="image/webp">
+                             <img src="./img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
                           <figcaption>Screenshot version of ${blogversion[0]}</figcaption>
                        </figure>
