@@ -11,5 +11,6 @@ export default defineConfig({
         service: 'service.html'
       }
     }
-  }
+  },
+  base:'./'
 });
