@@ -79,7 +79,7 @@ header{
           }
           :is(#Menu,option){
             background-color: c.$secondaryfontcolor;
-            @include f.font-BricolageGrotesque;
+            @include f.font-ubuntu-normal;
             color:c.$fontcolor;
             text-transform: uppercase;
           }
@@ -95,7 +95,7 @@ header{
                 }
                 :is(#Menu,option){
                     background-color: c.$secondaryfontcolor;
-                    @include f.font-BricolageGrotesque;
+                    @include f.font-ubuntu-normal;
                     color:c.$fontcolor;
                     text-transform: uppercase;
                     letter-spacing: 2px;
@@ -119,7 +119,7 @@ header{
        }
        :is(.btnResume>a ){
            color:c.$headerbgone;
-           @include f.font-BricolageGrotesque;
+           @include f.font-ubuntu-normal;
        }
     }
 }
