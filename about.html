@@ -12,14 +12,13 @@
     <meta name="distribution" content="global">
     <link rel="icon" href="./img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" href="./img/joseph2026.webp" as="image" fetchpriority="high">
     <script type="speculationrules">
        {
             "prerender": [ 
                 {
                     "source":"document",
                     "where":{
-                        "href_matches":["^/index.html$","^/projects.html$","^/service.html$","^/blog.html$",^/contact.html$"]
+                        "href_matches": "^/(index|projects|service|blog|contact)\\.html$"
                     },
                     "eagerness": "moderate" 
                 } 
