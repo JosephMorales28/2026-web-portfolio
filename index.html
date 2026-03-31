@@ -15,16 +15,23 @@
     <link rel="preload" href="./css/style.css" as="style"/>
     <link rel="preload" href="./img/joseph2026_300x300.webp" as="image" imaegsrcset="/img/joseph2026_150x150.webp 150w,/img/joseph2026_300x300.webp 300w" fetchpriority="high">
     <script type="speculationrules">
-       {
-            "prefetch": [ 
-                {
-                    "source":"document",
-                    "urls":["/about.html", "/project.html","/service.html","/blog.html",/contact.html"],
-                    "eagerness": "moderate" 
-                } 
-            ]
-        }
+{
+  "prefetch": [
+    {
+      "source": "list",
+      "urls": [
+        "/about.html",
+        "/project.html",
+        "/service.html",
+        "/blog.html",
+        "/contact.html"
+      ],
+      "eagerness": "moderate"
+    }
+  ]
+}
     </script>
+
     <title>Joseph Web Portfolio 2026</title>
 </head>
 <body id="index">
