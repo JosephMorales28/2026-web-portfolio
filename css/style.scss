@@ -261,6 +261,67 @@ main{
                         display: block;
                         padding:0;
                         padding-bottom: 1rem;
+                        #versionlist{
+                            display:flex;
+                            code{
+                               background-color:c.$header;
+                               padding:5px;
+                               border:0 solid transparent;
+                               border-radius: 10px;
+                               corner-shape: squircle;
+                            }
+                            #title_author{
+                               display:grid;
+                               grid-template-columns: repeat(1,1fr);
+                               p{
+                                   color:c.$secondaryfontcolor;
+                                }
+                            }
+                        }
+                    }
+                    li:first-child{
+                        #versionlist{
+                            code{
+                                background-color:c.$secondaryfontcolor;
+                                padding:5px;
+                                border:0 solid transparent;
+                                border-radius: 10px;
+                                corner-shape: squircle;
+                            }
+                        }
+                    }
+                    li:nth-child(2){
+                        #versionlist{
+                            code{
+                                background-color:green;
+                                padding:5px;
+                                border:0 solid transparent;
+                                border-radius: 10px;
+                                corner-shape: squircle;
+                            }
+                        }
+                    }
+                    li:last-child{
+                        #versionlist{
+                            code{
+                                background-color:red;
+                                padding:5px;
+                                border:0 solid transparent;
+                                border-radius: 10px;
+                                corner-shape: squircle;
+                            }
+                            #title_author{
+                               display:grid;
+                               grid-template-columns: repeat(1,1fr);
+                               p{
+                                   color:c.$secondaryfontcolor;
+                                }
+                                p:after{
+                                    content:' (expire)';
+                                    color:grey;
+                                }
+                            }
+                        }
                     }
                 }
             }
