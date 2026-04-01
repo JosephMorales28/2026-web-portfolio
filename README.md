@@ -20,20 +20,34 @@ Open VsCode Terminal `powershell`
 ### Update on `main.js`
 ```javascript
 
-else if (window.location.pathname.endsWith("blog.html")){
+    else if (window.location.pathname.endsWith("blog.html")){
         const blogTitle="Blog";
         const blogLinks=[
             {label:"Version Patch", href:"/version_patch.html"},
             {label:"Community", href:"/community.html"}
         ];
-        const blogversion=["v1.1.4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
+        const versionpatch=["v1.1.5","v1,1,4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
+        const blogversion=[
+                          {patch:"v1.1.5",name:"Update patch changes"},
+                          {patch:"v1.1.4",name:"Add blog site"},
+                          {patch:"v1.1.3",name:"Add Section tag"},
+                          {patch:"v1.1.2",name:"Font Changes"},
+                          {patch:"v1.1.1",name:"Form Tag on Index"},
+                          {patch:"v1.1.0",name:"Upgrade Website portfolio"}
+        ];
 
         const blogMenuItems=blogLinks.map((item)=>{
             return `<li><a href="${item.href}">${item.label}</a></li>`;
         }).join("");
 
         const blogversionlist=blogversion.map((item)=>{
-            return `<li>${item}</li>`;
+            return `<li><div id="versionlist">
+                            <code style="align-self:flex-start">${item.patch}</code>
+                            <div id="title_author">
+                               <h3>- ${item.name}</h3>
+                               <p> Joseph Morales</p>
+                            </div></div>
+                    </li>`;
         }).join("");
         
         return `
@@ -47,10 +61,31 @@ else if (window.location.pathname.endsWith("blog.html")){
                     <div id="blogleft">
                        <figure>
                           <picture>
-                             <source srcset="img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
-                             <img src="img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                             <source srcset="./img/banner/websiteportfoliov1.1.5.webp" type="image/webp">
+                             <img src="./img/banner/websiteportfoliov1.1.5.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
-                          <figcaption>Release version of ${blogversion[0]}</figcaption>
+                          <figcaption>Release version of ${versionpatch[0]}</figcaption>
+                       </figure>
+                       <h2>Patch Changes:</h2>
+                       <p>- Update blog style and version list.</p>
+                       <p>- Fix error bug script.</p>
+                       <p>- Add new .htaccess file</p>
+                       <p>- Update README.md</p>
+                       <p>- Relocate Folders for image and fonts</p>
+                       <h2>Screenshot:</h2>
+                       <figure>
+                          <picture>
+                             <source srcset="./img/banner/screenshot_v1.1.5.webp" type="image/webp">
+                             <img src="./img/banner/screenshot_v1.1.5.webp" alt="banner" loading="lazy" fetchpriority="high">
+                          </picture>
+                          <figcaption>Screenshot version of ${versionpatch[0]}</figcaption>
+                       </figure>
+                       <figure>
+                          <picture>
+                             <source srcset="./img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
+                             <img src="./img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                          </picture>
+                          <figcaption>Release version of ${versionpatch[1]}</figcaption>
                        </figure>
                        <h2>Features:</h2>
                        <p>- add blog site and update the script.</p>
@@ -58,10 +93,10 @@ else if (window.location.pathname.endsWith("blog.html")){
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>
-                             <source srcset="img/banner/screenshot_v1.1.4.webp" type="image/webp">
-                             <img src="img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
+                             <source srcset="./img/banner/screenshot_v1.1.4.webp" type="image/webp">
+                             <img src="./img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
-                          <figcaption>Screenshot version of ${blogversion[0]}</figcaption>
+                          <figcaption>Screenshot version of ${versionpatch[1]}</figcaption>
                        </figure>
                     </div>
                     <div id="blogright">
@@ -74,53 +109,4 @@ else if (window.location.pathname.endsWith("blog.html")){
            </main>
         `;
     }
-```
-### Update on `nav.js`
-```javascript
-export function exp_nav_func(){
-
-    if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
-
-    const myName="Joseph Anthony V. Morales";
-    const myPosition="Web Development | Graphic Design";
-    const myBio="Hi, I'm Joseph, a passionate web developer and graphic designer based in the Philippines.";
-    const imgAlt="profile picture";
-    
-    return `
-         <nav role="navigation">
-                <div class="profile">
-                   <div class="profile-pic">
-                       <picture>
-                           <source srcset="../img/joseph2026_150x150.webp" media="(max-width:150px)" type="image/webp">
-                           <source srcset="../img/joseph2026_300x300.webp" media="(max-width:300px)" type="image/webp">
-                           <img src="../img/joseph2026_300x300.webp" alt="${imgAlt}" fetchpriority="high">
-                       </picture>
-                   </div>
-                   <div class="profile-info">
-                       <h1>${myName}</h1>
-                       <h2>${myPosition}</h2>
-                       <p>${myBio}</p>
-                   </div>
-                </div>
-        </nav>
-    `;
-   }
-   else if (window.location.pathname.endsWith("about.html")){
-    return "";
-   }
-   else if (window.location.pathname.endsWith("project.html")){
-    return "";
-   }
-   else if (window.location.pathname.endsWith("service.html")){
-    return "";
-   }
-   else if (window.location.pathname.endsWith("blog.html")){
-    return "";
-   }
-   else if (window.location.pathname.endsWith("contact.html")){
-    return "";
-   }
-return "";
-}
-
 ```
