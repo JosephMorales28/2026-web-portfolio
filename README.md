@@ -1,5 +1,5 @@
 # New Release on 2026 webportfolio v1.1.4
-![Banner](/img/banner/websiteportfoliov1.1.4.webp)
+![Banner](/public/img/banner/websiteportfoliov1.1.4.webp)
 
 ### Features in `v1.1.4`
 - add Blog site and update Script by [@JosephMorales28](https://github.com/JosephMorales28)
