@@ -1,16 +1,19 @@
 # New Release on 2026 webportfolio v1.1.4
-![Banner](/public/img/banner/websiteportfoliov1.1.4.webp)
+![Banner](/public/img/banner/websiteportfoliov1.1.5.webp)
 
-### Features in `v1.1.4`
-- add Blog site and update Script by [@JosephMorales28](https://github.com/JosephMorales28)
-- fixed bugs on script by [@JosephMorales28](https://github.com/JosephMorales28)
+### Features in `v1.1.5`
+- Update blog style and version list by by [@JosephMorales28](https://github.com/JosephMorales28)
+- Fix error bug script by [@JosephMorales28](https://github.com/JosephMorales28)
+- Add new .htaccess file by [@JosephMorales28](https://github.com/JosephMorales28)
+- Update README.md by [@JosephMorales28](https://github.com/JosephMorales28)
+- Relocate Folders for image and fonts by [@JosephMorales28](https://github.com/JosephMorales28)
 
 ### Authors and Buy me a Coffee
 
 [@JosephMorales28](https://github.com/JosephMorales28)
 
 ### Installation
-click the Assets on the release version of v1.1.4 in github release or on the code button Download ZIP release version of `v1.1.4`
+click the Assets on the release version of v1.1.5 in github release or on the code button Download ZIP release version of `v1.1.5`
 
 ### Run on Browser
 Open VsCode Terminal `powershell`
