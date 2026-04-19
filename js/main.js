@@ -11,10 +11,17 @@ export function exp_main_func(){
                             link: "#"
                          },
                          {
-                            title: "My First Project",
-                            paragraph: "This is my first project in web development and graphic design",
+                            title: "My Second Project",
+                            paragraph: "This is my Second project in web development and graphic design",
                             img: "./img/sample.webp",
-                            alt: "First Project picture",
+                            alt: "Second Project picture",
+                            link: "#"
+                         },
+                         {
+                            title: "My Third Project",
+                            paragraph: "This is my third project in web development and graphic design",
+                            img: "./img/sample.webp",
+                            alt: "Third Project picture",
                             link: "#"
                          }
                         ];
