@@ -19,7 +19,7 @@ export function exp_main_func(){
                          }
                         ];
 
-      const sections = projects.map(project => `
+      const projectsections = projects.map(project => `
             <div class="portfolio-section">
                 <div class="portfolio-img">
                     <picture>
@@ -38,7 +38,7 @@ export function exp_main_func(){
       return `
               <main role="main">
                     <h1 id="projects">${myTitle}</h1>
-                    ${sections}
+                    ${projectsections}
               </main>
              `;
     }
