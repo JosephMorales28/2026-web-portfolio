@@ -1,58 +1,46 @@
 export function exp_main_func(){
-        if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
-            
-        const myTitle="My Portfolio";
-        const myDescription="My First Project";
-        const myParagraph="This is my first project in web development and graphic design";
-        const imgAlt="projects picture";
-        const project_link="visit";
-        
-        return `
-            <main role="main">
-                <h1 id="projects">${myTitle}</h1>
-                <div class="portfolio-section">
-                    <div class="portfolio-img">
-                        <picture>
-                           <source srcset="./img/sample.webp" type="image/webp">
-                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
-                        </picture>
-                    </div>
-                    <div class="portfolio-description">
-                       <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p></br>
-                       <a href="#">${project_link}</a>
-                    </div>
-                </div>
+    if ( window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+       const myTitle = "My Portfolio";
 
-                <div class="portfolio-section">
-                    <div class="portfolio-img">
-                        <picture>
-                           <source srcset="./img/sample.webp" type="image/webp">
-                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
-                        </picture>
-                    </div>
-                    <div class="portfolio-description">
-                       <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p></br>
-                       <a href="#">${project_link}</a>
-                    </div>
-                </div>
+       const projects = [
+                         {
+                            title: "Masterpiece Apparel",
+                            paragraph: "This is my first project in web development and graphic design",
+                            img: "./img/sample.webp",
+                            alt: "Masterpiece Apparel picture",
+                            link: "#"
+                         },
+                         {
+                            title: "My First Project",
+                            paragraph: "This is my first project in web development and graphic design",
+                            img: "./img/sample.webp",
+                            alt: "First Project picture",
+                            link: "#"
+                         }
+                        ];
 
-                <div class="portfolio-section">
-                    <div class="portfolio-img">
-                        <picture>
-                           <source srcset="./img/sample.webp" type="image/webp">
-                           <img src="./img/sample.webp" alt="projects picture" loading="lazy" fetchpriority="high">
-                        </picture>
-                    </div>
-                    <div class="portfolio-description">
-                       <h2>${myDescription}</h2>
-                       <p>${myParagraph}</p></br>
-                       <a href="#">${project_link}</a>
-                    </div>
+      const sections = projects.map(project => `
+            <div class="portfolio-section">
+                <div class="portfolio-img">
+                    <picture>
+                             <source srcset="${project.img}" type="image/webp">
+                             <img src="${project.img}" alt="${project.alt}" loading="lazy" fetchpriority="high">
+                    </picture>
                 </div>
-            </main>
-         `;
+                <div class="portfolio-description">
+                     <h2>${project.title}</h2>
+                     <p>${project.paragraph}</p></br>
+                     <a href="${project.link}">Visit &rarr;</a>
+                </div>
+            </div>
+      `).join("");
+
+      return `
+              <main role="main">
+                    <h1 id="projects">${myTitle}</h1>
+                    ${sections}
+              </main>
+             `;
     }
     else if(window.location.pathname.endsWith("about.html")){
         const aboutTitle="About Me";
