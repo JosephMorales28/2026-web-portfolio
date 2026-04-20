@@ -112,7 +112,28 @@ export function exp_main_func(){
                           {patch:"v1.1.1",name:"Form Tag on Index"},
                           {patch:"v1.1.0",name:"Upgrade Website portfolio"}
         ];
-
+        
+        const releaseversion=[
+                              {
+                                version:"v1.1.5",
+                                img:"./img/banner/websiteportfoliov1.1.5.webp",
+                                alt:"bannerv1.1.5",
+                                loading:"lazy",
+                                fetchpriority:"high"
+                              }           
+        ];
+        let releaseHTML='';
+        for(let release=0;release < releaseversion.length;release++){
+            releaseHTML+=`
+                       <figure>
+                          <picture>
+                             <source srcset="${releaseversion[release].img}" type="image/webp">
+                             <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
+                          </picture>
+                          <figcaption>Release version of ${releaseversion[release].version}</figcaption>
+                       </figure>
+            `;
+        }
         const blogMenuItems=blogLinks.map((item)=>{
             return `<li><a href="${item.href}">${item.label}</a></li>`;
         }).join("");
@@ -136,13 +157,7 @@ export function exp_main_func(){
                  </ul>
                  <div id="bloggrid">
                     <div id="blogleft">
-                       <figure>
-                          <picture>
-                             <source srcset="./img/banner/websiteportfoliov1.1.5.webp" type="image/webp">
-                             <img src="./img/banner/websiteportfoliov1.1.5.webp" alt="banner" loading="lazy" fetchpriority="high">
-                          </picture>
-                          <figcaption>Release version of ${versionpatch[0]}</figcaption>
-                       </figure>
+                       ${releaseHTML}
                        <h2>Patch Changes:</h2>
                        <p>- Update blog style and version list.</p>
                        <p>- Fix error bug script.</p>
