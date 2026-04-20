@@ -52,7 +52,7 @@ export function exp_main_func(){
     else if(window.location.pathname.endsWith("about.html")){
         const aboutimg=[
                          {
-                            img:"./img/aboutbanner.webp",
+                            img:"./img/banner/aboutbanner.webp",
                             alt:"aboutbanner",
                             loading:"lazy",
                             fetchpriority: "high"
