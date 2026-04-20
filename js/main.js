@@ -50,10 +50,28 @@ export function exp_main_func(){
              `;
     }
     else if(window.location.pathname.endsWith("about.html")){
+        const aboutimg=[
+                         {
+                            img:"./img/aboutbanner.webp",
+                            alt:"aboutbanner",
+                            loading:"lazy",
+                            fetchpriority: "high"
+                         }
+                        ];
+
+        const aboutsection=aboutimg.map(img=>`
+               <picture>
+                  <source srcset="${aboutimg.img}" type="image/webp">
+                  <img src="${aboutimg.img}" alt="${aboutimg.alt}" loading="${aboutimg.loading}" fetchpriority="${aboutimg.fetchpriority}">
+               </picture>
+            `).join("");
+        
         const aboutTitle="About Me";
         const aboutParagraph="Hello! I'm a passionate web developer and graphic designer with a love for creating visually stunning and user-friendly websites. With a background in both design and coding, I bring a unique perspective to every project I work on. When I'm not coding, you can find me exploring the latest design trends or experimenting with new graphic design techniques.";
+        
         return `
             <main role="main">
+                   ${aboutsection}
                 <h1 id="about">${aboutTitle}</h1>
                 <p>${aboutParagraph}</p>
             </main>
