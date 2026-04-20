@@ -85,7 +85,7 @@ export function exp_main_func(){
             {label:"Version Patch", href:"/version_patch.html"},
             {label:"Community", href:"/community.html"}
         ];
-        const versionpatch=["v1.1.5","v1,1,4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
+        const versionpatch=["v1.1.5","v1.1.4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
         const blogversion=[
                           {patch:"v1.1.5",name:"Update patch changes"},
                           {patch:"v1.1.4",name:"Add blog site"},
