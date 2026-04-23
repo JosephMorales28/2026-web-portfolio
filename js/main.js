@@ -121,7 +121,7 @@ export function exp_main_func(){
                               {
                                 version:"v1.1.5",
                                 img:"./img/banner/websiteportfoliov1.1.5.webp",
-                                alt="banner for v1.1.5",
+                                alt:"banner for v1.1.5",
                                 loading:"lazy",
                                 fetchpriority:"high"
                               }           
