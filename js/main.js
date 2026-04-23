@@ -171,6 +171,7 @@ export function exp_main_func(){
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>
+                             <source srcset="./img/banner/screenshot_v1.1.5-compressed.avif" type="image/avif">
                              <source srcset="./img/banner/screenshot_v1.1.5.webp" type="image/webp">
                              <img src="./img/banner/screenshot_v1.1.5.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
