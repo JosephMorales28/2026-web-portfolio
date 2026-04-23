@@ -55,6 +55,7 @@ export function exp_main_func(){
         const aboutimg=[
                          {
                             image:"aboutbanner.webp",
+                            avif:"aboutbanner.avif",
                             alt:"aboutbanner",
                             loading:"lazy",
                             fetchpriority: "high"
@@ -63,6 +64,7 @@ export function exp_main_func(){
 
         const aboutsection=aboutimg.map(img=>`
                <picture>
+                  <source srcset="/img/banner/${img.avif}" type="image/avif">
                   <source srcset="/img/banner/${img.image}" type="image/webp">
                   <img src="/img/banner/${img.image}" alt="${img.alt}" loading="${img.loading}" fetchpriority="${img.fetchpriority}">
                </picture>
