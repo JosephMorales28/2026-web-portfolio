@@ -55,7 +55,7 @@ export function exp_main_func(){
         const aboutimg=[
                          {
                             image:"aboutbanner.webp",
-                            avif:"aboutbanner.avif",
+                            avif:"aboutbanner-compressed.avif",
                             alt:"aboutbanner",
                             loading:"lazy",
                             fetchpriority: "high"
