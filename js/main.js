@@ -121,7 +121,7 @@ export function exp_main_func(){
                               {
                                 version:"v1.1.5",
                                 img:"./img/banner/websiteportfoliov1.1.5.webp",
-                                alt:"bannerv1.1.5",
+                                alt:"/img/banner/websiteportfoliov1.1.5-compressed.avif",
                                 loading:"lazy",
                                 fetchpriority:"high"
                               }           
@@ -131,6 +131,7 @@ export function exp_main_func(){
             releaseHTML+=`
                        <figure>
                           <picture>
+                             <source srcset="${releaseversion[release].avif}" type="image/avif">
                              <source srcset="${releaseversion[release].img}" type="image/webp">
                              <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
                           </picture>
@@ -179,6 +180,7 @@ export function exp_main_func(){
                        </figure>
                        <figure>
                           <picture>
+                             <source srcset="./img/banner/websiteportfolio-compressed.avif" type="image/avif">
                              <source srcset="./img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
                              <img src="./img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
@@ -190,6 +192,7 @@ export function exp_main_func(){
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>
+                             <source srcset="./img/banner/screenshot_v1.1.4-compressed.avif" type="image/avif">
                              <source srcset="./img/banner/screenshot_v1.1.4.webp" type="image/webp">
                              <img src="./img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
                           </picture>
