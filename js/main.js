@@ -7,6 +7,7 @@ export function exp_main_func(){
                             title: "Masterpiece Apparel",
                             paragraph: "This is my first project in web development and graphic design",
                             img: "./img/sample.webp",
+                            avif:"./img/sample.avif",
                             alt: "Masterpiece Apparel picture",
                             link: "#"
                          },
@@ -30,6 +31,7 @@ export function exp_main_func(){
             <div class="portfolio-section">
                 <div class="portfolio-img">
                     <picture>
+                             <source srcset="${project.avif}" type="image/avif">
                              <source srcset="${project.img}" type="image/webp">
                              <img src="${project.img}" alt="${project.alt}" loading="lazy" fetchpriority="high">
                     </picture>
