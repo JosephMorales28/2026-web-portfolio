@@ -121,7 +121,6 @@ export function exp_main_func(){
                               {
                                 version:"v1.1.5",
                                 img:"./img/banner/websiteportfoliov1.1.5.webp",
-                                avif:"./img/banner/websiteportfoliov1.1.5-compressed.avif",
                                 alt="banner for v1.1.5",
                                 loading:"lazy",
                                 fetchpriority:"high"
@@ -132,7 +131,7 @@ export function exp_main_func(){
             releaseHTML+=`
                        <figure>
                           <picture>
-                             <source srcset="${releaseversion[release].avif}" type="image/avif">
+                             <source srcset="./img/banner/websiteportfoliov1.1.5-compressed.avif" type="image/avif">
                              <source srcset="${releaseversion[release].img}" type="image/webp">
                              <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
                           </picture>
