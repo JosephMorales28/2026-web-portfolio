@@ -109,6 +109,7 @@ export function exp_main_func(){
         ];
         const versionpatch=["v1.1.5","v1.1.4","v1.1.3","v1.1.2","v1.1.1","v1.1.0"];
         const blogversion=[
+                          {patch:"v1.1.6",name:"Update new patch"},
                           {patch:"v1.1.5",name:"Update patch changes"},
                           {patch:"v1.1.4",name:"Add blog site"},
                           {patch:"v1.1.3",name:"Add Section tag"},
@@ -117,28 +118,69 @@ export function exp_main_func(){
                           {patch:"v1.1.0",name:"Upgrade Website portfolio"}
         ];
         
-        const releaseversion=[
-                              {
-                                version:"v1.1.5",
-                                img:"./img/banner/websiteportfoliov1.1.5.webp",
-                                alt:"banner for v1.1.5",
-                                loading:"lazy",
-                                fetchpriority:"high"
-                              }           
-        ];
-        let releaseHTML='';
-        for(let release=0;release < releaseversion.length;release++){
-            releaseHTML+=`
-                       <figure>
-                          <picture>
-                             <source srcset="./img/banner/websiteportfoliov1.1.5-compressed.avif" type="image/avif">
-                             <source srcset="${releaseversion[release].img}" type="image/webp">
-                             <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
-                          </picture>
-                          <figcaption>Release version of ${releaseversion[release].version}</figcaption>
-                       </figure>
-            `;
-        }
+        const releaseversion = [
+                                 {
+                                   version: "v1.1.6",
+                                   img: "./img/banner/websiteportfoliov1.1.6.webp",
+                                   avif: "./img/banner/websiteportfoliov1.1.6.avif",
+                                   alt: "banner for v1.1.6",
+                                   loading: "lazy",
+                                   fetchpriority: "high",
+                                   feature: "Features:",
+                                   list: [
+                                           "update index.html",
+                                           "update about.html",
+                                           "upgrade new image from webp to avif",
+                                           "update blog.html",
+                                           "fixed main.js script in main tag on pages",
+                                           "update readme.md"
+                                        ],
+                                   screenshot:"Screenshot"
+                                 },
+                                 {
+                                   version: "v1.1.5", 
+                                   img: "./img/banner/websiteportfoliov1.1.5.webp",
+                                   avif: "./img/banner/websiteportfoliov1.1.5.avif", // add if you want AVIF
+                                   alt: "banner for v1.1.5",
+                                   loading: "lazy",
+                                   fetchpriority: "high",
+                                   features:"Features:",
+                                   list:[
+                                           "- Update blog style and version list",
+                                           "- Fix error bug script",
+                                           "- Add new .htaccess file",
+                                           "- Update README.md",
+                                           "- Relocate Folders for image and fonts"
+                                        ],
+                                   screenshot:"Screenshot"
+                                 }
+                               ];
+
+        let releaseHTML = ''; 
+        for (let release = 0; release < releaseversion.length; release++) {
+            releaseHTML += `
+                            <figure>
+                                    <picture>
+                                             <source srcset="${releaseversion[release].avif || ''}" type="image/avif">
+                                             <source srcset="${releaseversion[release].img}" type="image/webp">
+                                             <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
+                                    </picture>
+                                    <figcaption>Release version of ${releaseversion[release].version}</figcaption>
+                           </figure>
+                           ${releaseversion[release].feature ? `<h2>${releaseversion[release].feature}</h2>` : ""}
+                           ${releaseversion[release].list ? `<ul>${releaseversion[release].list.map(item => `<li>${item}</li>`).join("")}</ul>` : ""}
+                           ${releaseversion[release].screenshot ? `<h2>${releaseversion[release].screenshot}</h2>` : ""}
+                           <figure>
+                                    <picture>
+                                             <source srcset="${releaseversion[release].avif || ''}" type="image/avif">
+                                             <source srcset="${releaseversion[release].img}" type="image/webp">
+                                             <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
+                                    </picture>
+                                    <figcaption>Release version of ${releaseversion[release].version}</figcaption>
+                           </figure>
+                           `;
+}
+
         const blogMenuItems=blogLinks.map((item)=>{
             return `<li><a href="${item.href}">${item.label}</a></li>`;
         }).join("");
@@ -163,12 +205,6 @@ export function exp_main_func(){
                  <div id="bloggrid">
                     <div id="blogleft">
                        ${releaseHTML}
-                       <h2>Patch Changes:</h2>
-                       <p>- Update blog style and version list.</p>
-                       <p>- Fix error bug script.</p>
-                       <p>- Add new .htaccess file</p>
-                       <p>- Update README.md</p>
-                       <p>- Relocate Folders for image and fonts</p>
                        <h2>Screenshot:</h2>
                        <figure>
                           <picture>

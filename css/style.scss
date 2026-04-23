@@ -247,6 +247,11 @@ main{
                 p{
                     padding-bottom: 1rem;
                 }
+                ul{
+                    li{
+                        display:block;
+                    }
+                }
             }
             #blogright{
                 color:c.$fontcolor;
