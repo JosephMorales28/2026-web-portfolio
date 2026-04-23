@@ -135,7 +135,9 @@ export function exp_main_func(){
                                            "fixed main.js script in main tag on pages",
                                            "update readme.md"
                                         ],
-                                   screenshot:"Screenshot"
+                                   screenshot:"Screenshot",
+                                   imagescreenshot: "./img/banner/screenshotv1.1.6.webp",
+                                   imagescreenavif: "./img/banner/screenshotv1.1.6-compressed.avif"
                                  },
                                  {
                                    version: "v1.1.5", 
@@ -144,7 +146,7 @@ export function exp_main_func(){
                                    alt: "banner for v1.1.5",
                                    loading: "lazy",
                                    fetchpriority: "high",
-                                   features:"Features:",
+                                   feature:"Features:",
                                    list:[
                                            "- Update blog style and version list",
                                            "- Fix error bug script",
@@ -152,7 +154,25 @@ export function exp_main_func(){
                                            "- Update README.md",
                                            "- Relocate Folders for image and fonts"
                                         ],
-                                   screenshot:"Screenshot"
+                                   screenshot:"Screenshot",
+                                   imagescreenshot: "./img/banner/screenshot_v1.1.5.webp",
+                                   imagescreenavif: "./img/banner/screenshot_v1.1.5-compressed.avif"
+                                 },
+                                {
+                                   version: "v1.1.4", 
+                                   img: "./img/banner/websiteportfoliov1.1.4.webp",
+                                   avif: "./img/banner/websiteportfolio.avif", // add if you want AVIF
+                                   alt: "banner for v1.1.4",
+                                   loading: "lazy",
+                                   fetchpriority: "high",
+                                   feature:"Features:",
+                                   list:[
+                                           "- add blog site and update the script",
+                                           "- Fix error bug script"
+                                        ],
+                                   screenshot:"Screenshot",
+                                   imagescreenshot: "./img/banner/screenshot_v1.1.4.webp",
+                                   imagescreenavif: "./img/banner/screenshot_v1.1.4.avif"
                                  }
                                ];
 
@@ -172,9 +192,9 @@ export function exp_main_func(){
                            ${releaseversion[release].screenshot ? `<h2>${releaseversion[release].screenshot}</h2>` : ""}
                            <figure>
                                     <picture>
-                                             <source srcset="${releaseversion[release].avif || ''}" type="image/avif">
-                                             <source srcset="${releaseversion[release].img}" type="image/webp">
-                                             <img src="${releaseversion[release].img}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
+                                             <source srcset="${releaseversion[release].imagescreenavif || ''}" type="image/avif">
+                                             <source srcset="${releaseversion[release].imagescreenshot}" type="image/webp">
+                                             <img src="${releaseversion[release].imagescreenshot}" alt="${releaseversion[release].alt}" loading="${releaseversion[release].loading}" fetchpriority="${releaseversion[release].fetchpriority}">
                                     </picture>
                                     <figcaption>Release version of ${releaseversion[release].version}</figcaption>
                            </figure>
@@ -205,35 +225,6 @@ export function exp_main_func(){
                  <div id="bloggrid">
                     <div id="blogleft">
                        ${releaseHTML}
-                       <h2>Screenshot:</h2>
-                       <figure>
-                          <picture>
-                             <source srcset="./img/banner/screenshot_v1.1.5-compressed.avif" type="image/avif">
-                             <source srcset="./img/banner/screenshot_v1.1.5.webp" type="image/webp">
-                             <img src="./img/banner/screenshot_v1.1.5.webp" alt="banner" loading="lazy" fetchpriority="high">
-                          </picture>
-                          <figcaption>Screenshot version of ${versionpatch[0]}</figcaption>
-                       </figure>
-                       <figure>
-                          <picture>
-                             <source srcset="./img/banner/websiteportfolio-compressed.avif" type="image/avif">
-                             <source srcset="./img/banner/websiteportfoliov1.1.4.webp" type="image/webp">
-                             <img src="./img/banner/websiteportfoliov1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
-                          </picture>
-                          <figcaption>Release version of ${versionpatch[1]}</figcaption>
-                       </figure>
-                       <h2>Features:</h2>
-                       <p>- add blog site and update the script.</p>
-                       <p>- fix error bug script.</p>
-                       <h2>Screenshot:</h2>
-                       <figure>
-                          <picture>
-                             <source srcset="./img/banner/screenshot_v1.1.4-compressed.avif" type="image/avif">
-                             <source srcset="./img/banner/screenshot_v1.1.4.webp" type="image/webp">
-                             <img src="./img/banner/screenshot_v1.1.4.webp" alt="banner" loading="lazy" fetchpriority="high">
-                          </picture>
-                          <figcaption>Screenshot version of ${versionpatch[1]}</figcaption>
-                       </figure>
                     </div>
                     <div id="blogright">
                         <h2>Version List:</h2>
